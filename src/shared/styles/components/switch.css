@@ -1,0 +1,116 @@
+/* mt square */
+.mt-square {
+    display: inline-block;
+    box-sizing: border-box;
+    background: #f5f5f5;
+}
+
+.mt-square label {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 90px;
+    background: #fff;
+    transition: all 0.3s ease;
+    margin-bottom: 0;
+}
+
+.mt-square label:before {
+    content: 'OFF';
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    background: #7142ed;
+    transition: 0.3s ease;
+    z-index: 1;
+    border-radius: 4px;
+    display: flex;
+    font-size: 10px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    top: -15px;
+    transform: translateX(45px);
+}
+
+.mt-square input {
+    position: absolute;
+    box-sizing: border-box;
+    height: 0;
+    width: 0;
+    font-size: 10px;
+    margin: 0;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.mt-square input:focus {
+    outline: none;
+}
+
+.mt-square input:after,
+.mt-square input:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.mt-square input:before {
+    content: 'ON';
+}
+
+.mt-square input:after {
+    content: 'OFF';
+    left: 45px;
+}
+
+.mt-square input:checked + label:before {
+    background: #7142ed;
+    transform: translateX(0px);
+    content: 'ON';
+    border-radius: 4px;
+}
+
+.mt-square input:disabled:after,
+.mt-square input:disabled:before {
+    cursor: not-allowed !important;
+}
+
+.mt-square input:disabled + label {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+}
+
+.mt-square input:disabled + label:before {
+    background: #ddd !important;
+}
+
+.mt-square.la-cr input:before,
+.mt-square.la-cr input:checked + label:before {
+    content: 'Lakhs';
+}
+.mt-square.la-cr label:before,
+.mt-square.la-cr input:after {
+    content: 'Crores';
+}
+
+.mt-square.yr-mo input:before,
+.mt-square.yr-mo input:checked + label:before {
+    content: 'Years';
+}
+.mt-square.yr-mo label:before,
+.mt-square.yr-mo input:after {
+    content: 'Months';
+}

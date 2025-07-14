@@ -1,0 +1,503 @@
+.signin-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: #faf3f0;
+}
+.signin-inside {
+    display: block;
+    height: 530px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: auto;
+}
+.signin-split {
+    position: absolute;
+    width: 429px;
+    height: 0px;
+    left: 50%;
+    top: 50%;
+    border: 0.5px solid #ddd4d4;
+    transform: rotate(90.01deg);
+}
+.circle-logo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 306px;
+    top: 455px;
+    background: #281336;
+    border-radius: 27px;
+}
+.signin-left {
+    width: 100%;
+    position: relative;
+    height: 480px;
+    margin: 25px 0;
+}
+.signin-left-holder {
+    position: absolute;
+    bottom: 10px;
+}
+.signin-left-content1 {
+    font-family: Gilroy !important;
+    font-size: 30px;
+    line-height: 35px;
+    color: #281336;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+.signin-left-content2 {
+    font-family: Gilroy !important;
+    font-size: 30px;
+    line-height: 35px;
+    color: #31c9bc;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+
+.signin-right {
+    position: relative;
+    margin-top: 22%;
+}
+
+.signin-right-content1 {
+    height: 48px;
+    width: 364px;
+    font-family: Gilroy !important;
+    font-size: 22px;
+    line-height: 48px;
+    color: #181b3b !important;
+    font-weight: 700;
+}
+
+.signin-input1 {
+    width: 100%;
+    height: 46px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #bebec7;
+    border-radius: 4px;
+    font-family: 'Proxima Nova', Gilroy !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 10px;
+}
+.signin-input2 {
+    width: 100%;
+    height: 46px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #bebec7;
+    border-radius: 4px;
+    font-family: 'Proxima Nova', Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 10px;
+}
+
+.login-button {
+    position: absolute;
+    width: 111px;
+    height: 44px;
+    top: 170px;
+    background: #7142ed;
+    border-radius: 4px;
+    border-color: #7142ed;
+    color: #ffffff;
+    font-family: 'Nunito Sans', Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+}
+.forget-password {
+    position: absolute;
+    width: auto;
+    height: 22px;
+    right: 10px;
+    top: 180px;
+    font-family: 'Proxima Nova', Gilroy !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000 !important;
+    margin-top: 10px;
+}
+.signin-new-account {
+    font-family: Gilroy !important;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #281336;
+    text-align: right;
+    margin-top: 20px;
+}
+.new-signin-signup-btn {
+    width: 100px;
+    height: 27px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+}
+.signin-signup-btn {
+    width: 74px;
+    height: 27px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+}
+.arrow {
+    position: absolute;
+    width: 15.42px;
+    height: 9.3px;
+}
+.password-show {
+    position: absolute;
+    width: 44px;
+    height: 22px;
+    left: 94%;
+    top: 102px;
+    font-family: 'Proxima Nova', Gilroy !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #7142ed !important;
+}
+.otp-login-button {
+    position: absolute;
+    width: 111px;
+    height: 44px;
+    top: 100px;
+    background: #7142ed;
+    border-radius: 4px;
+    border-color: #7142ed;
+    color: #ffffff;
+    font-family: 'Nunito Sans', Gilroy !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+}
+.signup-color {
+    height: calc(100vh - 54px);
+    display: flex;
+}
+.signup-new-account {
+    position: absolute;
+    width: 308px;
+    height: 27px;
+    left: 70%;
+    top: 5%;
+    font-family: 'Nunito Sans', Gilroy !important;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #281336;
+}
+
+.signup-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: #faf3f0;
+}
+
+.signup-row {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    margin: auto;
+}
+
+.signup-left {
+    width: 100%;
+    height: 25%;
+}
+.signup-join-now {
+    position: relative;
+    width: 100%;
+    font-family: 'Gilroy-Regular', Gilroy;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    padding: 5% 27% 5% 0%;
+}
+
+.signup-left-content1 {
+    height: 37px;
+    font-family: 'Gilroy-ExtraBold', Gilroy !important;
+    font-size: 30px;
+    line-height: 35px;
+    color: #281336;
+    padding-top: 10px;
+}
+.signup-left-content2 {
+    font-family: 'Gilroy-ExtraBold', Gilroy !important;
+    font-size: 30px;
+    line-height: 35px;
+    color: #31c9bc;
+    padding-top: 10px;
+}
+
+.new-signup-details {
+    width: 100%;
+}
+
+.signup-right {
+    padding: 20px;
+    position: absolute;
+    height: 48px;
+    left: 32.81%;
+    right: 55.21%;
+    top: calc(50% - 112px / 2 - 178px);
+}
+.signup-right-content1 {
+    padding-top: 5%;
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    width: auto;
+    font-size: 22px;
+    line-height: 1;
+    color: #181b3b;
+}
+
+.signup-form-group {
+    padding: 15px;
+    margin: 0;
+    color: rgb(160, 158, 158);
+    width: 100%;
+}
+.signup-box-top {
+    color: rgb(160, 158, 158);
+    height: 100px;
+    width: 45%;
+}
+.signup-label {
+    font-family: 'Proxima Nova', Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+.new-signup-border {
+    display: block;
+    width: 100%;
+    height: 45px !important;
+    padding: 10px 15px !important;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bebec7;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.new-signup-border:focus {
+    outline: none;
+    border-bottom: 1px solid #251534;
+}
+.new-signup-border-inv {
+    display: block;
+    width: 100% !important;
+    height: 45px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bebec7;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.new-signup-border-inv:focus {
+    outline: none;
+    border-bottom: 1px solid #251534;
+}
+
+.new-signup-btn {
+    display: flex;
+    padding: 9px 20px;
+    position: absolute;
+    width: 170px;
+    height: 43px;
+    right: 6%;
+    top: 76%;
+    background: #7142ed;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.new-signup-btn-inv {
+    display: flex;
+    padding: 9px 20px;
+    position: absolute;
+    width: 170px;
+    height: 43px;
+    right: 5%;
+    top: 77%;
+    background: #7142ed;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.signup-split {
+    position: absolute;
+    width: 429px;
+    height: 0px;
+    left: 33%;
+    top: 333px;
+    border: 0.5px solid #ddd4d4;
+    transform: rotate(90.01deg);
+}
+.new-signup-check-elm {
+    padding: 0px 0px 15px 0px;
+}
+.month-year-picker .react-datepicker {
+    width: 182px;
+}
+.react-datepicker-wrapper {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+.signup-container .comments-icon {
+    top: -17px;
+    right: 15px;
+    width: 30px;
+}
+.terms-conditions {
+    font-size: 16px;
+}
+.name-error {
+    display: block;
+    width: 100%;
+    height: 45px !important;
+    padding: 10px 15px !important;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid red;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.teamSignup-error {
+    margin-right: 35px;
+    display: block;
+    width: 100%;
+    height: calc(1.9em + 0.8rem + 2px);
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid red;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+    .container.sign-container {
+        height: auto;
+    }
+    .sp-design {
+        text-align: center;
+    }
+    .signin-new-account {
+        text-align: center;
+    }
+    .signin-inside {
+        margin: 5%;
+    }
+    .border-right {
+        border-right: none !important;
+    }
+    .signin-left {
+        height: auto;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .signin-left-holder {
+        position: static;
+    }
+    .signin-right {
+        margin-top: 5%;
+    }
+    .signin-right-content1 {
+        width: 100%;
+        text-align: center;
+    }
+    .forget-password {
+        position: static;
+        display: inline-block;
+    }
+    .signup-join-now {
+        padding: 5%;
+    }
+    .signup-row {
+        height: auto;
+        margin: 5%;
+    }
+    .signup-box-top {
+        width: 100%;
+    }
+    .box-side {
+        margin-right: 0;
+    }
+    .new-signup-btn-inv {
+        display: block;
+        width: 100%;
+        position: static;
+        margin-bottom: 15px;
+    }
+    .new-signup-btn {
+        display: block;
+        width: 100%;
+        position: static;
+        margin-bottom: 15px;
+    }
+    .signup-container .form {
+        padding: 0;
+    }
+    .signin-container .form {
+        padding: 0;
+    }
+    .new-product li {
+        flex-basis: 100%;
+        margin: 10px 0 !important;
+        flex-direction: row-reverse;
+    }
+    .new-prod-title a {
+        justify-content: normal;
+    }
+    .design-sample {
+        width: 100%;
+        margin: 0 auto !important;
+    }
+}

@@ -1,0 +1,236 @@
+.banner2-background {
+    position: relative;
+    background: #e0beb1;
+    background-image: url('/images/home_2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 25px);
+}
+.test-image {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.test-heading {
+    position: absolute;
+    width: 45%;
+    right: 0;
+    font-family: 'Gilroy';
+    font-size: 60px;
+    line-height: 70px;
+    color: #291336;
+    font-weight: bold;
+    top: 25%;
+    text-align: left;
+}
+.test-paragraph {
+    position: absolute;
+    width: 45%;
+    right: 0;
+    top: 50%;
+    font-family: 'Gilroy';
+    font-size: 30px;
+    line-height: 38px;
+    color: #291336;
+}
+.test-radious {
+    position: absolute;
+    width: 116px;
+    height: 38px;
+    left: 607px;
+    top: 498px;
+    border: 1px solid #291336;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: #a52a2a00;
+}
+.test-button {
+    position: absolute;
+    width: 85px;
+    height: 33px;
+    left: 22px;
+    top: 2px;
+    font-family: 'Nunito Sans', Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 33px;
+    color: #291336;
+}
+.banner3-background {
+    position: relative;
+    background: #b5e5d9;
+    width: 100%;
+}
+.banner3-inner {
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+}
+.banner3-heading {
+    padding-top: 60px;
+    font-family: Gilroy;
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+    color: #291336;
+    font-weight: bold;
+}
+.banner3-heading1 {
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+    color: #291336;
+    font-weight: bold;
+}
+.banner-box {
+    width: 33%;
+    text-align: center;
+    padding: 3% 1%;
+    display: inline-block;
+}
+.ban3-image {
+    width: 120px;
+    height: 120px;
+}
+.ban3-h2 {
+    width: 100%;
+    font-family: Gilroy;
+    font-size: 32px;
+    line-height: 40px;
+    color: #291336;
+    padding: 20px 0;
+    font-weight: 600;
+}
+.ban3-para {
+    width: 100%;
+    font-family: Gilroy;
+    font-size: 26px;
+    line-height: 30px;
+    color: #333333;
+}
+.banner4-background {
+    position: relative;
+    background: #faf3f0;
+    width: 100%;
+    height: 100vh;
+}
+.banner4-inner {
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+}
+.ban4-left-section {
+    width: 65%;
+    display: inline-block;
+    vertical-align: top;
+}
+.ban4-h1 {
+    width: 85%;
+    font-family: Gilroy;
+    font-size: 60px;
+    line-height: 70px;
+    color: #291336;
+    font-weight: bold;
+}
+.mt-10 {
+    margin-top: 10%;
+}
+.mt-8 {
+    margin-top: 8%;
+}
+.ban4-para {
+    width: 75%;
+    font-family: Gilroy;
+    font-size: 30px;
+    line-height: 37px;
+    color: #291336;
+}
+.ban4-image {
+    position: absolute;
+    width: 355px;
+    height: 498px;
+    background: url(/images/home_window.webp);
+    display: inline-block;
+    right: 3%;
+}
+@media screen and (max-width: 991px) {
+    .banner-heading {
+        text-align: center;
+    }
+    .fin-heading {
+        text-align: center;
+    }
+    .test-image {
+        position: relative;
+        height: auto;
+    }
+    .test-heading {
+        position: relative;
+        width: 100%;
+        font-size: 50px;
+        top: 10%;
+        text-align: center;
+    }
+    .test-paragraph {
+        position: static;
+        width: 100%;
+        top: 30%;
+        padding: 10%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .banner4-background {
+        position: static;
+        height: auto;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner4-background{
+        text-align: center;
+    }
+    .banner-box {
+        width: 100%;
+    }
+    .ban4-left-section {
+        width: 100%;
+    }
+    .ban4-h1 {
+        width: 100%;
+        font-size: 50px;
+    }
+    .ban4-para {
+        width: 100%;
+    }
+    .ban4-image{
+        position: static;
+    }
+}
+.faq-content1{
+    margin-left: -20px;
+}
+.faq-content2{
+    margin-left: 20px;
+}
+.faq-question{
+    text-align: justify;
+    color: #251534;
+    font-weight: 600;
+    font-size: 16px;
+}
+.faq-answer{
+    color: #251534;
+    font-size: 16px;
+}
+.faq-answer a {
+    font-size: 16px;
+}
+.tac-conditions {
+    padding: 10px 30px;
+    overflow: auto;
+    height : 400px;
+}
+.terms-leftside{
+    margin-left: -25px;
+}

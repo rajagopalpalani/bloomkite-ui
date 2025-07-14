@@ -1,0 +1,243 @@
+
+  /*Team */
+  h4.key-title {
+    margin: 10px 0 10px 8px !important;
+    color: #251534;
+    font-size: 16px;
+    font-weight: 600;
+}
+h4.team-title {
+    margin: 10px 0 10px 8px !important;
+    color: #251534;
+    font-size: 16px;
+    font-weight: 600;
+}
+  .profile-image1{
+    
+    height: 100px;
+    margin: 10px;
+  }
+  .team-box{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 234, 247);
+    display: inline-block;
+    overflow: hidden;
+    padding: 35px 0px 15px 15px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.text-border-team{
+    padding: .375rem .75rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    width: 200px;
+    line-height: 1.5;
+    color: #495057 !important;
+    background-color: rgb(243, 247, 250);
+    background-clip: padding-box;
+    border: 1px solid rgb(230, 234, 247);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.text-border-team:focus{
+    outline: none;
+    border-bottom: 1px solid #251534 !important;
+}
+.save-Btn-team {
+    background-color: #251534;
+    border: none;
+    color: #fff;
+    padding: 7px 15px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    margin: 150px 0 0 50px;
+    font-size: 12px;
+}
+.team-people{
+    color:#007bff;
+    font-family: Gilroy;
+}
+.team-form{
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+}   
+.text-border-team1{
+    margin-left: 3px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057 !important;
+    background-clip: padding-box;
+    border: 1px solid rgb(230, 234, 247);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.add-member{
+    margin-top: 30px;
+}
+.key-add{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.team-table{
+    text-align: left;
+    margin: 8px 0px;
+    width: 100%;
+}
+.team-table-bg{
+    background-color: #fff;
+}
+.team-table th, .team-table td{
+    font-size: 16px;
+    padding: 10px;
+}
+.team-table-align{
+    font-size: 10px !important;
+    color: rgb(128, 128, 128);
+}
+.table-link{
+    background-color: #f5f5f5;
+    color: rgb(191, 114, 253);
+    border-radius: 50%;
+    border: 1px solid #f5f5f5;
+}
+.upload-size{
+    padding-top: 8px;
+    width: 206px;
+}
+.create-btn{
+    margin-top: 30px;
+    background-color: #251534;
+    border: none;
+    color: #fff;
+    padding: 7px 15px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 20px;
+    font-size: 12px;
+    margin-left: 30%;
+    margin-bottom: 32px;
+}
+.key-upload{
+    margin-left: 25%;
+    width: 45% !important;
+}
+.key-create-btn{
+    margin-top: 30px;
+    background-color: #251534;
+    border: none;
+    color: #fff;
+    padding: 7px 15px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 56px;
+    font-size: 12px;
+    margin-left: 25%;
+    margin-bottom: 32px;
+}
+.adv-box2 {
+    margin: 2px 25px 10px 0px;
+    color: rgb(160, 158, 158);
+    display: inline-block;
+    padding: 0;
+    font-weight: 500 !important;
+}
+
+.key-form {
+    display: grid;
+    margin-left: 170px;
+}
+
+.key-header {
+    margin-left: 205px;
+}
+/*corporate information*/
+.text-border-ci{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057 !important;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid rgb(230, 234, 247);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.text-border-ci:focus{
+    outline: none;
+    border-bottom: 1px solid #251534 !important;
+}
+.corporate-form{
+    width: 28%;
+    background-color: #f5f5f5;
+    margin-right: 26px;
+    padding-left: 23px;
+    margin-bottom: 18px;
+    margin-left: 16px;
+}
+.ciname{
+   width: max-content !important;
+}
+.create-btn1{
+    margin-top: 3px;
+    background-color: #251534;
+    border: none;
+    color: #fff;
+    padding: 7px 15px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 20px;
+    font-size: 12px;
+    margin-left: 3%;
+}
+.aboutme{
+    background-color: rgb(243, 247, 250);
+    border: 1px solid rgb(230, 234, 247);
+    width: 650px;
+    padding: .375rem .75rem;
+    color: #495057;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    
+}
+.aboutme:focus{
+    outline: none;
+    border-bottom: 1px solid #251534 !important;
+}    
+.team-design {
+    margin-bottom: 20px;
+}
+.team-bundle {
+    padding: 15px 30px 0px 50px !important;
+    background-color: #f5f5f5;
+}
+.keypeople-name{
+    font-size: 16px;
+}
+.add-team-member{
+    font-size: 16px;
+}
+.result-found{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.keypeople-delete {
+    font-size: 16px;
+}

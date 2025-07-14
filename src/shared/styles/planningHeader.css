@@ -1,0 +1,34 @@
+.savegoal-Btn{
+    background-color: #251534;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+/* Planning CSS*/
+
+.planning-leftside{
+    overflow: hidden !important;
+}
+.financial-img{
+    display: inline-block;
+    transform: translateY(-3px);
+}
+.lumsumRadio {
+    float: right;
+    transform: translate(-750px, 14px);
+}
+.lumsumRadio input{
+    margin-left: 10px;
+}
+.lumsumRadio input[type='radio'] {
+    transform: translateY(1px);
+    margin-right: 2px;
+}

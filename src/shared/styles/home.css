@@ -1,0 +1,50 @@
+.whyus-content {
+    margin-top: 30px;
+}
+
+.heading {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #251534;
+    font-size: var(--font2);
+    text-align: center;
+}
+.faq-heading{
+    font-weight: 700;
+    color: #251534;
+    font-size: var(--font2);
+    margin-top: 10px;
+    text-align: center;
+}
+.faq-head1{
+    text-align: center;
+}
+
+.heading-product {
+    font-weight: 700;
+    color: #251534;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.heading-gap {
+    font-weight: 700;
+    color: #251534;
+    font-size: 20px;
+}
+
+.error-head {
+    font-weight: bolder;
+    font-size: 55px;
+    color: #251534;
+}
+
+.error-subhead {
+    color: #808080;
+}
+
+.white-color {
+    color: #ffffff !important;
+    margin-top: 15px;
+    margin-right: 46%;
+}

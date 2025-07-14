@@ -1,0 +1,185 @@
+/* Profile Page css starts here */
+.bloomkite-profile-info-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.particulars-container .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.profile-dark-bg {
+    background-color: #f2dfd8;
+    height: 80px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.profile-light-bg {
+    padding: 0px 15px 15px 15px;
+    background-color: #fbf2ef;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.bloomkite-profile-info {
+    text-align: center;
+}
+.bloomkite-profile-info-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-top: -40px;
+    border-radius: 40px;
+}
+.profile-title {
+    margin: 0px 0px 15px 0px;
+}
+.bloomkite-profile-info-container .bloomkite-profile-info {
+    flex: 1;
+    padding: 15px 20px 15px 20px;
+}
+.bloomkite-profile-info-container .bloomkite-profile-info h5 {
+    color: #808080;
+}
+.bloomkite-profile-info-container .bloomkite-profile-info .profile-options a,
+.bloomkite-profile-info-container .bloomkite-profile-info .profile-options span {
+    margin-right: 0;
+    color: #808080 !important;
+}
+.bloomkite-profile-points-container .points-group {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}
+.bloomkite-profile-points-container .points-group .points .point-label {
+    color: #808080;
+    margin-bottom: 0px;
+}
+.bloomkite-profile-points-container .points-group .points .point-value {
+    color: #251534;
+    font-weight: bold;
+}
+.padding15 {
+    padding: 15px;
+}
+.bloomkite-profile-products .profile-product,
+.bloomkite-profile-awards .awards,
+.bloomkite-profile-keypeople .awards,
+.bloomkite-profile-promotions .promotion {
+    padding: 0px 15px 15px 0px;
+}
+.bloomkite-profile-products .profile-product .remun-design {
+    border: 2rem solid rgb(217, 217, 250);
+    margin-right: 10%;
+    position: relative;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.bloomkite-profile-products .profile-product .remun-design-name {
+    position: absolute;
+    font-size: 14px;
+    top: -8px;
+}
+.bloomkite-profile-products .profile-product ul {
+    padding-bottom: 15px;
+    padding-left: 25px;
+    line-height: 25px;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+.bloomkite-profile-products .profile-product li:before {
+    content: '–';
+}
+.gray-line {
+    border-top: 1px solid #808080;
+}
+.teams .team-members {
+    display: flex;
+    flex-wrap: wrap;
+}
+.teams img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+.particulars-container p {
+    margin-bottom: 0;
+}
+.bloomkite-profile-experience .profile-address,
+.bloomkite-profile-education .profile-education,
+.bloomkite-profile-awards .profile-awards {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.bloomkite-profile-keypeople .profile-keypeople {
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+.bloomkite-profile-keypeople .keypeople {
+    padding: 0px 15px 15px 0px;
+}
+.bloomkite-profile-promotions .promotion > div {
+    height: 160px;
+}
+.bloomkite-profile-promotions .promotion img {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.bg-white.padding15.h5 {
+    text-align: center;
+}
+.bg-brands {
+    background-color: #fff !important;
+}
+.remun-icon-upload {
+    position: relative;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 50%;
+    width: 30px;
+    text-align: center;
+    color: rgb(211, 211, 211) !important;
+    display: inline-block;
+}
+.profile-particular {
+    display: none;
+}
+.product-name {
+    font-size: 16px;
+    display: inline;
+}
+.product-box {
+    padding-top: 10px;
+}
+.experts-head {
+    font-size: 16px;
+}
+.aboutme-text {
+    font-size: 16px;
+    padding-bottom: 15px;
+    text-align: justify;
+    word-break: break-word;
+}
+.service-text {
+    font-size: 16px;
+}
+.product-text {
+    font-size: 16px;
+}
+.profile-icon {
+    width: 0.875em !important;
+}
+.user-not-available {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.points-group {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}

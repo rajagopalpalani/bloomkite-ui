@@ -1,0 +1,108 @@
+$grid__bp-xs: 320;
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1240;
+$grid__bp-xxl: 1400;
+$grid__cols: 12;
+
+$map-grid-props: (
+    '': 0,
+    '-xs': $grid__bp-xs,
+    '-sm': $grid__bp-sm,
+    '-md': $grid__bp-md,
+    '-lg': $grid__bp-lg,
+    '-xl': $grid__bp-xl,
+    '-xxl': $grid__bp-xxl
+);
+
+@mixin create-mq($breakpoint, $min-or-max) {
+    @if ($breakpoint == 0) {
+        @content;
+    } @else {
+        @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
+            @content;
+        }
+    }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+    @include create-mq($breakpoint, 'min') {
+        &-#{$modifier}-offset-0 {
+            margin-left: 0;
+        }
+        @for $i from 1 through $grid-cols {
+            &-#{$modifier}-#{$i} {
+                flex: (100 / ($grid-cols / $i)) * 1%;
+                max-width: (100 / ($grid-cols / $i)) * 1%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            &-#{$modifier}-offset-#{$i} {
+                margin-left: (100 / ($grid-cols / $i)) * 1%;
+            }
+        }
+    }
+    @include create-mq($breakpoint, 'max') {
+        &-#{$modifier}-offset-0 {
+            margin-left: 0;
+        }
+        @for $i from 1 through $grid-cols {
+            &-#{$modifier}-#{$i} {
+                flex: (100 / ($grid-cols / $i)) * 1%;
+                max-width: (100 / ($grid-cols / $i)) * 1%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            &-#{$modifier}-offset-#{$i} {
+                margin-left: (100 / ($grid-cols / $i)) * 1%;
+            }
+        }
+    }
+}
+
+@each $modifier, $breakpoint in $map-grid-props {
+    @if ($modifier == '') {
+        $modifier: '-xs';
+    }
+    @include create-mq($breakpoint - 1, 'max') {
+        .hidden#{$modifier}-down {
+            display: none !important;
+        }
+    }
+    @include create-mq($breakpoint, 'min') {
+        .hidden#{$modifier}-up {
+            display: none !important;
+        }
+    }
+}
+
+.container {
+    max-width: $grid__bp-xl * 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    &--fluid {
+        margin: 0;
+        max-width: 100%;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+.cl {
+    @each $modifier, $breakpoint in $map-grid-props {
+        @include create-col-classes($modifier, $grid__cols, $breakpoint);
+    }
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

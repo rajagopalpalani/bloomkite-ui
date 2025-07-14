@@ -1,0 +1,88 @@
+.bloomkite-multiselect-container {
+    position: relative;
+}
+
+.bloomkite-multiselect-container .multiselect-arrow {
+    position: absolute;
+    top: 12px;
+    right: 7px;
+}
+
+.bloomkite-multiselect-container .multiselect-options label {
+    display: inline;
+    margin-left: 5px;
+    pointer-events: none;
+}
+
+.bloomkite-multiselect-container .multiselect-options li:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.bloomkite-multiselect-container .multiselect-chip {
+    background-color: #251534;
+    padding: 0px 1px 0px 5px;
+    color: #fff;
+    display: flex;
+    margin: 2px;
+    min-width: 0px;
+    box-sizing: border-box;
+}
+
+.bloomkite-multiselect-container .multiselect-input-wrapper {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 38px;
+}
+
+.bloomkite-multiselect-container .multiselect-chip .multiselect-close {
+    color: #fff !important;
+    opacity: 1;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    line-height: 17px;
+    padding: 3px 6px;
+}
+
+/* .bloomkite-multiselect-container .multiselect-chip .multiselect-close:hover {
+    background-color: #fff;
+} */
+
+.bloomkite-multiselect-container .multiselect-chip .close i {
+    pointer-events: none;
+}
+
+.bloomkite-multiselect-container .multiselect-options {
+    top: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 4px;
+    margin-top: 2px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.bloomkite-multiselect-container .multiselect-selected-items {
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    flex: 1 1 0%;
+    flex-wrap: wrap;
+    padding: 2px 20px 2px 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bloomkite-multiselect-container .multiselect-chip .multiselect-chip-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.2rem;
+}

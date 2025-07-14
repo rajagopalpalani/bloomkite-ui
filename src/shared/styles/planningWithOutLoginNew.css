@@ -1,0 +1,217 @@
+.calc-goal {
+    margin: 7.5px;
+    border-radius: 20px;
+    border-color: #bebec7;
+    color: #251534;
+    font-family: Gilroy;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    box-sizing: border-box;
+    font-weight: bold;
+    padding: 8px 15px;
+}
+.calc-goal:hover {
+    background-color: #c9b8f5;
+    color: #fff;
+    border-color: #c9b8f5;
+}
+.calc-goal.active {
+    background: #7142ed;
+    text-decoration: none;
+    color: #fff;
+    border-color: #7142ed;
+}
+.calc-goal.selected {
+    background: #a283fd;
+    text-decoration: none;
+    color: #fff;
+    border-color: #a283fd;
+}
+.goal-board {
+    width: 98%;
+    height: 28.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.goal-table-design1 {
+    padding: 0 10px;
+}
+.goal-table-design1 td {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+}
+.goal-table-design1 td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+.goal-table-design2 {
+    padding: 0 10px;
+    background: #d5f1ea;
+    border-radius: 16px;
+}
+.goal-table-design3 {
+    padding-right: 13px;
+    background: #f5f5dc;
+    border-radius: 16px;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.goal-table-design2 td {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+}
+.goal-table-design2 td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+.cashflow-board {
+    width: 98%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.networth-board {
+    width: 98%;
+    height: 40.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.networthwl-board {
+    width: 98%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.insurance-board {
+    width: 98%;
+    height: 82.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.insurancewl-board {
+    width: 98%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.priorities-board {
+    width: 98%;
+    height: 68.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.prioritieswl-board {
+    width: 98%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.priorityWithOutLogin-table-design {
+    padding: 15px;
+}
+.priorityWithOutLogin-table-design td {
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+    border: 3px solid;
+    border-color: #d5f1ea;
+}
+.riskProfile-board {
+    width: 98%;
+    height: 9.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.riskProfilewl-board {
+    width: 98%;
+    height: 6.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.finance-center-align {
+    margin: 0 2%;
+}
+.investment-board {
+    width: 98%;
+    height: 19.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.investmentwl-board {
+    width: 98%;
+    height: 21.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.emiCalculatorNew {
+    padding: 3%;
+}
+.emiCalculator-board {
+    width: 98%;
+    height: 60.5%;
+    background: #faf3f0;
+    border-radius: 16px;
+}
+.emiCalculator-board .view-all-btn {
+    position: absolute;
+    background-color: transparent;
+    color: #251534;
+    left: 6px;
+    top: 10px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.emicapacity-form {
+    padding: 0% 2% 1%;
+}
+.planning-leftBar {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.calc-option {
+    padding: 1%;
+    width: 100%;
+    display: inline-block;
+}
+.riskprofile-height{
+    height: 498px;
+}
+.riskProfile-padding{
+    padding: 1%;
+}
+.finance-table-design1{
+    padding-right: 13px;
+    background: #f5f5dc;
+    border-radius: 16px;
+    padding-top: 5px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.finance-table-design2{
+    padding-right: 13px;
+    background: #f5f5dc;
+    border-radius: 16px;
+    padding-top: 5px;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+.finance-table-design3{
+    padding-right: 13px;
+    background: #f5f5dc;
+    border-radius: 16px;
+    padding-top: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.finance-table-design4{
+    padding-right: 13px;
+    background: #f5f5dc;
+    border-radius: 16px;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    width: 98%;
+}

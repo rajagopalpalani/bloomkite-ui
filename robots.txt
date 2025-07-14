@@ -1,0 +1,6 @@
+# Allow access to all but a single crawler
+User-agent: Unnecessarybot
+Disallow: /
+
+User-agent: *
+Allow: /

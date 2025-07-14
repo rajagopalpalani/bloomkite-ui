@@ -1,0 +1,285 @@
+.dashboard-home {
+    height: 215px;
+    background: #ffffff;
+    box-shadow: 0px 4px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    margin: 100px 50px 25px 50px !important;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    padding: 0;
+}
+.dashboard-main {
+    background: transparent;
+    box-shadow: none;
+}
+.dashboard-head {
+    font-family: 'Gilroy-Medium', Gilroy;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    padding-top: 7px;
+    color: #4a4a4a;
+}
+.dashboard-subhead {
+    padding-top: 50px;
+    font-family: 'Gilroy-Regular', Gilroy;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #4a4a4a;
+}
+.profile-dashboard {
+    background: #e9e6f6;
+    border-radius: 8px;
+    display: inline-block;
+    width: 97.5%;
+    height: 215px;
+    margin: 0 15px 0 0;
+}
+.dashboard-profile {
+    padding: 5% 25px 0;
+    font-family: 'Gilroy-Medium', Gilroy;
+    font-size: 30px;
+    line-height: 35px;
+    color: #020202;
+    display: inline-block;
+}
+.dashboard-para {
+    font-family: 'Gilroy-Regular', Gilroy;
+    margin-top: 2%;
+    font-size: 16px;
+    line-height: 23px;
+    margin-left: 5%;
+    color: #4a4a4a;
+}
+.dashboard-profileimg {
+    float: right;
+    width: 100px;
+    margin: 25px;
+}
+.profile-right {
+    background: #fffbe8;
+    margin-left: 15px;
+}
+.dashboard-plan {
+    padding-top: 5%;
+    margin-left: 5%;
+    font-size: 30px;
+    line-height: 35px;
+    font-family: 'Gilroy-Medium', Gilroy;
+    font-size: 30px;
+    line-height: 35px;
+    color: #020202;
+}
+.plan-para {
+    margin-left: 3%;
+    font-family: 'Gilroy-Regular', Gilroy;
+    font-size: 16px;
+    line-height: 23px;
+    color: #4a4a4a;
+    display: inline-block;
+}
+.dashboard-planimg {
+    float: right;
+    width: 115px;
+    height: 100px;
+    padding-bottom: -9px;
+    transform: translateY(-90px);
+}
+.profile-footer1 {
+    max-width: 20%;
+    height: 160px;
+    left: 4%;
+    top: 80px;
+    background: #e0ffd6;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.profile-footer2 {
+    max-width: 20%;
+    height: 160px;
+    left: 10%;
+    top: 80px;
+    background: #cde7fb;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.profile-footer3 {
+    max-width: 20%;
+    height: 160px;
+    left: 13%;
+    top: 80px;
+    background: #ffd6f6;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.profile-footer4 {
+    max-width: 20%;
+    height: 160px;
+    left: 18%;
+    top: 80px;
+    background: #fbd5cd;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.dashboard-no1 {
+    font-family: 'Gilroy-Medium', 'Gilroy';
+    margin-left: 20%;
+    font-size: 50px;
+    color: #020202;
+}
+.dashboard-no2 {
+    font-family: 'Gilroy-Medium', 'Gilroy';
+    margin-left: 20%;
+    font-size: 50px;
+    color: #020202;
+}
+.dashboard-no3 {
+    font-family: 'Gilroy-Medium', 'Gilroy';
+    margin-left: 20%;
+    font-size: 50px;
+    color: #020202;
+}
+.dashboard-no4 {
+    font-family: 'Gilroy-Medium', 'Gilroy';
+    margin-left: 20%;
+    font-size: 50px;
+    color: #020202;
+}
+.dashboard-planned {
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+.dashboard-goals {
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+.dashboard-planned1 {
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+.dashboard-goals1 {
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+.footer-homepage {
+    margin-bottom: 10%;
+}
+.hr-dashboard {
+    margin-left: 5%;
+    width: 30%;
+    margin-right: 10%;
+    border: 2px solid #b680e8;
+}
+.homeprofile-dashboard {
+    margin-top: 30px;
+}
+/* .profile-center{
+    text-align: center;
+} */
+.dashboard-profile0 {
+    background: #ffffff;
+    border-radius: 8px;
+    margin-left: 2%;
+    margin-top: 20px;
+}
+.dashboard-profile1 {
+    background: #ffffff;
+    border-radius: 8px;
+    margin-left: 12%;
+    margin-top: 20px;
+}
+.dashboard-profile2 {
+    background: #ffffff;
+    border-radius: 8px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.profile-center {
+    font-weight: 600;
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #ed4d45;
+    padding-bottom: 10px;
+}
+.profile-content1 {
+    text-align: center;
+    line-height: 1.5;
+    color: #31c9bc;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Gilroy-SemiBold', Gilroy;
+}
+.profile-content2 {
+    text-align: center;
+    line-height: 1.5;
+    color: #31c9bc;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Gilroy-SemiBold', Gilroy;
+}
+.profile-content3 {
+    text-align: center;
+    line-height: 1.5;
+    color: #31c9bc;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Gilroy-SemiBold', Gilroy;
+}
+.planned-user {
+    max-width: 46%;
+    height: 215px;
+    left: 4%;
+    margin-top: 80px;
+    background: #e0ffd6;
+    border-radius: 8px;
+}
+.dashboard-planned2 {
+    font-family: 'Gilroy-Medium', 'Gilroy';
+    margin-left: 10%;
+    font-size: 50px;
+    color: #020202;
+}
+.dashboard-planned3 {
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+.following-user {
+    max-width: 46%;
+    height: 215px;
+    left: 6.5%;
+    top: 80px;
+    background: #cde7fb;
+    border-radius: 8px;
+}
+.dashboard-following1 {
+    font-family: 'Gilroy-SemiBold', Gilroy;
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.dashboard-following2 {
+    font-family: 'Gilroy-Medium', 'Gilroy';
+    margin-left: 10%;
+    font-size: 50px;
+    color: #020202;
+}

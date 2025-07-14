@@ -1,0 +1,82 @@
+.tab-container {
+    background-color: #fff;    
+    margin-bottom: 15px;
+}
+.tab-container .nav .active {
+    background-color: transparent;
+}
+.tab-container .nav .active::after {
+    border-bottom: none;
+}
+.tab-container .nav a {
+    font-size: 12px;
+    color: #b9b9b9 !important;
+    padding: 12px 10px;
+    display: inline-block;
+}
+.tab-container .nav-tabs {
+    margin: 0px 20px;
+}
+.tab-container .nav-tabs li {
+    padding: 0;    
+}
+.tab-container .nav-tabs li {
+    border-bottom: solid 3px transparent;
+}
+.tab-container .nav-tabs li:hover,
+.tab-container .nav-tabs li.active:hover,
+.tab-container .nav-tabs li.active {
+    border-width: 3px;
+    border-color: #DC143C;
+}
+.tab-container .nav-tabs li:hover {
+    border-color: #a09e9e;    
+}
+.tab-container .nav-tabs li.active a {
+    color: #DC143C !important;
+    font-weight: bold;
+}
+
+.active.fade:not(.show) {
+    opacity: 1;
+}
+
+.tab-container .nav-tabs {
+    margin-bottom: 0px;
+}
+
+.tab-container .tab-content {
+    padding: 30px 20px;
+}
+
+.tab-container label {
+    font-size: 12px;
+    font-weight: 600;
+}
+.tab-container .form-control {
+    background-color: #fff;
+    border: 1px solid #251534;
+}
+.tab-container .form-control-lg {
+    font-size: 1rem;
+    padding: .375rem .75rem;
+}
+.tab-container .react-month-picker input{
+    background-color: #fff !important;
+    border-color: #251534;
+    height: calc(1.5em + 1rem + 2px);
+    color: #495057;
+}
+.tab-container .react-month-picker input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.tab-container .form-row{
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.tab-container .form-row>.col, 
+.tab-container .form-row>[class*=col-] {
+    padding-right: 10px;
+    padding-left: 10px;
+}

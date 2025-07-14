@@ -1,0 +1,57 @@
+
+
+.box-investor-top {
+    width: 100%;
+  }
+  #star1{
+    height: 17px;
+    width: 17px;
+    padding-left: 10px;
+    margin-right: 5px;
+    text-align: right;
+    float: right;  
+    color: #c0c0c0;
+    border-radius: 50%;
+}
+
+.inv-Comments-Icon{
+  float: left;
+  top: -10px;
+  position: relative;
+  right: 10px;
+  border: 2px solid rgb(211, 211, 211);
+  border-radius: 50%;
+  width: 25px;
+  text-align: center;
+  color: rgb(211, 211, 211) !important;
+  transform: translate(181px, -20px);
+}
+  
+.box-area {
+  background-color:rgb(248, 244, 244);
+  width: 80%;
+  height: auto;
+}
+.area-log{
+  list-style-type: none;
+}
+.area-title {
+  font-size: 16px;
+  display: inline-block;
+}
+.area-border {
+  margin-bottom: 30px;
+}
+ul.area-log {
+  margin: 0px;
+  padding: 0;
+}
+.react-stars:focus {
+  outline: none;
+}
+/* select#gender {
+  width: 100% !important;
+} */
+.box-investor-side {
+  margin-right: 13px;
+}

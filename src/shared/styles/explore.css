@@ -1,0 +1,150 @@
+.explore-container {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0px 15px;
+    width: 100%;
+}
+
+.non-login-explore {
+    background: #fff;
+}
+
+.explore-user-search {
+    display: flex;
+}
+
+.explore-user-search-block {
+    display: block;
+}
+
+.explore-user-search-label {
+    margin: 0 15px;
+}
+
+.explore-user-search-input,
+.explore-user-search-control {
+    margin: 27px;
+    display: flex;
+    width: 233px;
+}
+
+.explore-user-search-control {
+    width: 120px;
+}
+
+.explore-user-search-control button {
+    margin-right: 5px;
+}
+
+.nav-item.explore-menu {
+    cursor: pointer;
+}
+
+.nav-item.explore-menu.active {
+    color: #495057 !important;
+    background-color: transparent;
+}
+.explore-menu .nav-link:hover {
+    border: 1px solid transparent;
+    background: #c8c8c8;
+}
+.explore-user {
+    padding: 10px;
+}
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 100%;
+}
+.explore-user-details {
+    padding: 5px;
+    display: flex;
+    flex-basis: 65%;
+    flex-wrap: wrap;
+}
+.explore-user-image {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    display: flex;
+    flex-basis: 25%;
+}
+.explore-user-info {
+    color: #868686;
+    margin-bottom: 0;
+}
+.explore-no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #c8c8c8;
+    min-height: 300px;
+}
+
+.explore-no-results .fa-search {
+    font-size: 50px;
+}
+
+.explore-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.explore-design {
+    background-color: #f5f5f5;
+}
+
+.explore-user-profile-box {
+    cursor: pointer;
+}
+.explore-user-list {
+    width: 100%;
+}
+.particular-withoutLogin {
+    float: right;
+    padding-right: 25%;
+}
+
+.explore-user-container {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .explore-user-search-input,
+    .explore-user-search-control {
+        width: auto;
+    }
+
+    .explore-user-search-control {
+        justify-content: center;
+    }
+
+    .explore-user-search {
+        display: block;
+    }
+
+    .explore-user-search-label {
+        margin-top: 0px;
+    }
+    .explore-user-list {
+        padding: 0;
+    }
+    .explore-user-image {
+        display: flex;
+        flex-direction: row;
+        flex-basis: auto;
+        align-content: center;
+        align-self: center;
+        justify-content: center;
+        flex-basis: 100%;
+    }
+    .explore-user-container {
+        flex-direction: column;
+    }
+    .explore-user-details {
+        text-align: center;
+    }
+}
