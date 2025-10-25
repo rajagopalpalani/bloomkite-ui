@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import CustomReactTooltip from '../common/customReactTooltip';
 import { signupUser } from '../../actions/signup';
 import signupSelector from '../../selectors/signup';
@@ -31,7 +31,7 @@ class InvestorSignup extends React.Component {
         super(props);
         this.state = {
             emailId: '',
-            fullname: '',
+            fullName: '',
             displayName: '',
             pincode: '',
             dob: '',
@@ -46,12 +46,12 @@ class InvestorSignup extends React.Component {
             openPopup: false,
             clear: false,
             termsConditions: false,
-            fullNameError : false,
-            pincodeError : false,
-            phoneNumberError : false,
-            emailIdError : false,
-            passwordError : false,
-            confirmPasswordError : false
+            fullNameError: false,
+            pincodeError: false,
+            phoneNumberError: false,
+            emailIdError: false,
+            passwordError: false,
+            confirmPasswordError: false
         };
     }
 
@@ -87,32 +87,32 @@ class InvestorSignup extends React.Component {
         if (name === 'fullName') {
             fullNameError = value.length < 3;
             fullNameError && toastrError(toastrMessage.emptyName);
-            this.setState({fullNameError : fullNameError})
+            this.setState({ fullNameError: fullNameError })
         }
         if (name === 'pincode') {
-            pincodeError =  !validPincodeNumberRegex.test(value);
+            pincodeError = !validPincodeNumberRegex.test(value);
             pincodeError && toastrError(toastrMessage.emptyPincode);
-            this.setState({pincodeError : pincodeError})
+            this.setState({ pincodeError: pincodeError })
         }
         if (name === 'phoneNumber') {
             phoneNumberError = !validPhoneNumberRegex.test(value);
             phoneNumberError && toastrError(toastrMessage.emptyPhoneNumber);
-            this.setState({phoneNumberError : phoneNumberError})
+            this.setState({ phoneNumberError: phoneNumberError })
         }
         if (name === 'emailId') {
             emailIdError = !validEmailRegex.test(value);
             emailIdError && toastrError(toastrMessage.emptyMail);
-            this.setState({emailIdError : emailIdError})
+            this.setState({ emailIdError: emailIdError })
         }
         if (name === 'password') {
             passwordError = !validPasswordRegex.test(value);
             passwordError && toastrError(toastrMessage.emptyPassword);
-            this.setState({passwordError : passwordError})
+            this.setState({ passwordError: passwordError })
         }
         if (name === 'confirmPassword') {
             confirmPasswordError = this.state.password !== value;
             confirmPasswordError && toastrError(toastrMessage.emptyConfirmPassword);
-            this.setState({confirmPasswordError : confirmPasswordError})
+            this.setState({ confirmPasswordError: confirmPasswordError })
         }
         this.setState({ [`${name}Info`]: false });
     };
@@ -134,10 +134,12 @@ class InvestorSignup extends React.Component {
     };
 
     handleSignup = (e) => {
+        console.log("Create Account 2025");
         e.preventDefault();
+
         if (
             this.state.emailId != '' &&
-            this.state.fulName != '' &&
+            this.state.fullName != '' &&
             this.state.pincode != '' &&
             this.state.password != '' &&
             this.state.phoneNumber != '' &&
@@ -162,6 +164,7 @@ class InvestorSignup extends React.Component {
                                             confirmPassword: this.state.confirmPassword,
                                             roleId: this.state.roleId
                                         };
+                                        console.log("Investore SignUp")
                                         this.props.handleSignup(options);
                                     } else {
                                         toastrError(toastrMessage.emptyTerms);
@@ -207,7 +210,7 @@ class InvestorSignup extends React.Component {
             termsConditions: false,
             clear: true
         });
-    }; 
+    };
 
     render() {
         const { emailId, fullName, pincode, displayName, gender, dob, password, confirmPassword, phoneNumber } = this.state;

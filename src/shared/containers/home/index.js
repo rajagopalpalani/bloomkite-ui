@@ -1,22 +1,17 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import Banner from '../../components/home/banner';
-import Loader from '../../components/common/loader';
-const BannerTwo = lazy(() => import('../../components/home/bannerTwo'));
-const BannerThree = lazy(() => import('../../components/home/bannerThree'));
-const BannerFour = lazy(() => import('../../components/home/bannerFour'));
-
-const renderLoader = () => <Loader loading={true} />;
+import BannerTwo from '../../components/home/bannerTwo';
+import BannerThree from '../../components/home/bannerThree';
+import BannerFour from '../../components/home/bannerFour';
 
 const Home = () => {
     return (
         <div className="main-container home-container">
             <div className="nopadding home-page">
                 <Banner />
-                <Suspense fallback={renderLoader()}>
-                    <BannerTwo />
-                    <BannerThree />
-                    <BannerFour />
-                </Suspense>
+                <BannerTwo />
+                <BannerThree />
+                <BannerFour />
             </div>
         </div>
     );

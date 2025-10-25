@@ -1,6 +1,5 @@
 import React from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import LightboxWrapper from '../common/LightboxWrapper';
 import classNames from 'classnames';
 
 class KeyPeople extends React.Component {
@@ -35,22 +34,14 @@ class KeyPeople extends React.Component {
                                             />
                                         )}
                                         {isOpen && (
-                                            <Lightbox
-                                                mainSrc={list[photoIndex].image || '/images/avatar.png'}
-                                                imageTitle={list[photoIndex].title}
-                                                nextSrc={list[(photoIndex + 1) % list.length].image || '/images/avatar.png'}
-                                                prevSrc={list[(photoIndex + list.length - 1) % list.length].image || '/images/avatar.png'}
-                                                onMovePrevRequest={() =>
-                                                    this.setState({
-                                                        photoIndex: (photoIndex + list.length - 1) % list.length
-                                                    })
-                                                }
-                                                onMoveNextRequest={() =>
-                                                    this.setState({
-                                                        photoIndex: (photoIndex + 1) % list.length
-                                                    })
-                                                }
-                                                onCloseRequest={() => this.setState({ isOpen: false })}
+                                            <LightboxWrapper
+                                                open={isOpen}
+                                                close={() => this.setState({ isOpen: false })}
+                                                index={photoIndex}
+                                                slides={list.map(img => ({ src: img.image || '/images/avatar.png', title: img.title }))}
+                                                on={{
+                                                    view: ({ index }) => this.setState({ photoIndex: index })
+                                                }}
                                             />
                                         )}
                                         <br />

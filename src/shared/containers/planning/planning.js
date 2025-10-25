@@ -33,7 +33,7 @@ import { clearTargetValue } from '../../actions/targetValue';
 import { clearRateFinder } from '../../actions/rateFinder';
 import { clearTenureFinder } from '../../actions/tenureFinder';
 import { fetchSharedByPartyIdAndRefId, clearCashflowValue, clearNetworthValue, clearPrioritiesValue, clearInsuranceValue } from '../../actions/planning';
-import { setTimeout } from 'timers';
+// setTimeout is available globally in both Node.js and browsers
 
 class Planning extends Component {
     constructor(props) {

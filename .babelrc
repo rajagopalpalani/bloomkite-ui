@@ -5,18 +5,16 @@
             {
                 "targets": { "node": "current", "browsers": ["last 2 versions", "IE 11"] },
                 "useBuiltIns": "usage",
-                "corejs": 3
+                "corejs": 3,
+                "loose": true
             }
         ],
         "@babel/preset-react"
     ],
     "plugins": [
-        "@loadable/babel-plugin",
-        ["@babel/plugin-proposal-decorators", { "legacy": true }],
-        ["@babel/plugin-proposal-class-properties", { "loose": true }],
-        ["@babel/plugin-proposal-private-methods", { "loose": true }],
-        ["@babel/transform-runtime"],
-        "@babel/plugin-syntax-dynamic-import",
-        "universal-import"
+        ["@babel/plugin-transform-class-properties", { "loose": true }],
+        ["@babel/plugin-transform-private-methods", { "loose": true }],
+        ["@babel/plugin-transform-runtime"],
+        "@babel/plugin-syntax-dynamic-import"
     ]
 }

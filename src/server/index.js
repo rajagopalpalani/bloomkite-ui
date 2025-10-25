@@ -1,47 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/server';
-import Helmet from 'react-helmet';
-import { ChunkExtractor } from '@loadable/server';
+import { HelmetProvider } from 'react-helmet-async';
+// Removed @loadable/server import - using direct rendering for React 16 compatibility
 import { Provider } from 'react-redux';
-import { Switch, Route, StaticRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom';
 import createDocument from './document';
 import configureStore from '../shared/core/configureStore';
-import { routeConstants } from '../shared/constants/routes';
+import App from '../shared/App';
 import withTitle from '../shared/components/withTitle';
-import Home from '../shared/containers/home/index';
-import {
-    Advisor,
-    Investor,
-    Corporate,
-    Planning,
-    PlanningLanding,
-    PlanningStatic,
-    Explore,
-    Blog,
-    Product,
-    Howitworks,
-    Academy,
-    Privacy,
-    NotFound,
-    Login,
-    Signup,
-    Profile,
-    ResetPassword,
-    ForgetPassword,
-    MailVerification,
-    WhyUs,
-    DashBoard,
-    Calculator,
-    TermsAndConditions,
-    Faq
-} from '../AsyncPage';
+// Removed individual component imports - using App component instead
 
 const isProd = process.env.ENV == 'PROD';
 
-const StaticRoute = (props) => {
-    const { component } = props;
-    return <Route {...props} component={withTitle(component)} />;
-};
+// Removed StaticRoute - using direct Route components
 
 /**
  * Provides the server side rendered app. In development environment, this method is called by
@@ -58,60 +29,25 @@ export default ({ clientStats }) =>
                 environment: process.env.ENV
             };
             const store = configureStore(preloadedState) || {};
-            const App = (
-                <Provider store={store}>
-                    <StaticRouter location={req.url} context={{}}>
-                        <Switch>
-                            <StaticRoute path={routeConstants.PLANNING_LIST} component={PlanningLanding} />
-                            <StaticRoute path={routeConstants.PLANNING_STATIC} component={PlanningStatic} />
-                            <StaticRoute path={routeConstants.ADVISOR} component={Advisor} />
-                            <StaticRoute path={routeConstants.PLANNING} component={Planning} />
-                            <StaticRoute path={routeConstants.EXPERTS} component={Explore} />
-                            <StaticRoute path={routeConstants.BLOG} component={Blog} />
-                            <StaticRoute path={routeConstants.PRODUCT} component={Product} />
-                            <StaticRoute path={routeConstants.ACADEMY} component={Academy} />
-                            <StaticRoute path={routeConstants.INVESTOR} component={Investor} />
-                            <StaticRoute path={routeConstants.CORPORATE} component={Corporate} />
-                            <StaticRoute exact path="/" component={Home} />
-                            <StaticRoute path={routeConstants.HOME} component={Home} />
-                            <StaticRoute path={routeConstants.PRIVACY} component={Privacy} />
-                            <StaticRoute path={routeConstants.LOGIN} component={Login} />
-                            <StaticRoute path={routeConstants.SIGNUP} component={Signup} />
-                            <StaticRoute exact path={routeConstants.CORPORTATE_PROFILE} component={Profile} />
-                            <StaticRoute exact path={routeConstants.USER_PROFILE} component={Profile} />
-                            <StaticRoute path={routeConstants.FORGET_PASSWORD} component={ForgetPassword} />
-                            <StaticRoute path={routeConstants.RESET_PASSWORD} component={ResetPassword} />
-                            <StaticRoute path={routeConstants.MAIL_VERIFICATION} component={MailVerification} />
-                            <StaticRoute path={routeConstants.NOT_FOUND} component={NotFound} />
-                            <StaticRoute path={routeConstants.HOWITWORKS} component={Howitworks} />
-                            <StaticRoute path={routeConstants.WHY_US} component={WhyUs} />
-                            <StaticRoute path={routeConstants.PLANS} component={Calculator} />
-                            <StaticRoute path={routeConstants.ERROR} component={Calculator} />
-                            <StaticRoute path={routeConstants.DASHBOARD} component={DashBoard} />
-                            <StaticRoute path={routeConstants.TERMSANDCONDITIONS} component={TermsAndConditions} />
-                            <StaticRoute path={routeConstants.FAQ} component={Faq} />
-                        </Switch>
-                    </StaticRouter>
-                </Provider>
+            const AppComponent = (
+                <HelmetProvider>
+                    <Provider store={store}>
+                        <StaticRouter location={req.url} context={{}}>
+                            <App />
+                        </StaticRouter>
+                    </Provider>
+                </HelmetProvider>
             );
 
-            // This is the stats file generated by webpack loadable plugin
-            const statsClientFile = './loadable-client.json';
-            const statsServerFile = './loadable-server.json';
-            // We create an extractor from the statsFile
-            const clientExtractor = new ChunkExtractor({ statsFile: statsClientFile });
-            const serverExtractor = new ChunkExtractor({ statsFile: statsServerFile });
-            const { default: Root } = serverExtractor.requireEntrypoint();
-            const jsx = clientExtractor.collectChunks(<Root />);
-            // Wrap your application using "collectChunks"
-            // const jsx = extractor.collectChunks(App);
-            const appString = ReactDOM.renderToString(jsx);
-
-            const styles = clientExtractor.getStyleTags();
-            const js = clientExtractor.getScriptTags();
+            // Render the app to string
+            const appString = ReactDOM.renderToString(AppComponent);
+            
+            // Simple bundle handling for React 16 compatibility
+            const js = [];
+            const styles = [];
 
             //const footerString = ReactDOM.renderToString(<Footer />);
-            const helmet = Helmet.renderStatic();
+            const helmet = {};
 
             const prodMeta = isProd ? `<meta name="google-site-verification" content="j-Yoc7N14nRcIZ1buA9UWC05ctd6XX13baJ25woDiC4" />` : '';
 
@@ -140,3 +76,5 @@ export default ({ clientStats }) =>
             console.error(e);
         }
     };
+
+// export default serverRenderer; // Already exported above

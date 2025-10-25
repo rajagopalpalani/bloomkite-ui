@@ -1,0 +1,914 @@
+/* Grid system based on SCSS variables and mixins */
+
+.container {
+    max-width: 1240px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container--fluid {
+    margin: 0;
+    max-width: 100%;
+}
+
+.container__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Column classes for xs (default) */
+.cl-xs-1 {
+    flex: 8.333333%;
+    max-width: 8.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-2 {
+    flex: 16.666667%;
+    max-width: 16.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-3 {
+    flex: 25%;
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-4 {
+    flex: 33.333333%;
+    max-width: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-5 {
+    flex: 41.666667%;
+    max-width: 41.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-6 {
+    flex: 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-7 {
+    flex: 58.333333%;
+    max-width: 58.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-8 {
+    flex: 66.666667%;
+    max-width: 66.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-9 {
+    flex: 75%;
+    max-width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-10 {
+    flex: 83.333333%;
+    max-width: 83.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-11 {
+    flex: 91.666667%;
+    max-width: 91.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cl-xs-12 {
+    flex: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Offset classes for xs */
+.cl-xs-offset-0 {
+    margin-left: 0;
+}
+
+.cl-xs-offset-1 {
+    margin-left: 8.333333%;
+}
+
+.cl-xs-offset-2 {
+    margin-left: 16.666667%;
+}
+
+.cl-xs-offset-3 {
+    margin-left: 25%;
+}
+
+.cl-xs-offset-4 {
+    margin-left: 33.333333%;
+}
+
+.cl-xs-offset-5 {
+    margin-left: 41.666667%;
+}
+
+.cl-xs-offset-6 {
+    margin-left: 50%;
+}
+
+.cl-xs-offset-7 {
+    margin-left: 58.333333%;
+}
+
+.cl-xs-offset-8 {
+    margin-left: 66.666667%;
+}
+
+.cl-xs-offset-9 {
+    margin-left: 75%;
+}
+
+.cl-xs-offset-10 {
+    margin-left: 83.333333%;
+}
+
+.cl-xs-offset-11 {
+    margin-left: 91.666667%;
+}
+
+/* Hidden classes */
+@media screen and (max-width: 319px) {
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .hidden-xs-up {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .hidden-sm-down {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .hidden-sm-up {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hidden-md-down {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hidden-md-up {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hidden-lg-down {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hidden-lg-up {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1239px) {
+    .hidden-xl-down {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .hidden-xl-up {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .hidden-xxl-down {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .hidden-xxl-up {
+        display: none !important;
+    }
+}
+
+/* Responsive column classes for sm and up */
+@media screen and (min-width: 576px) {
+    .cl-sm-1 {
+        flex: 8.333333%;
+        max-width: 8.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-2 {
+        flex: 16.666667%;
+        max-width: 16.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-3 {
+        flex: 25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-4 {
+        flex: 33.333333%;
+        max-width: 33.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-5 {
+        flex: 41.666667%;
+        max-width: 41.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-6 {
+        flex: 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-7 {
+        flex: 58.333333%;
+        max-width: 58.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-8 {
+        flex: 66.666667%;
+        max-width: 66.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-9 {
+        flex: 75%;
+        max-width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-10 {
+        flex: 83.333333%;
+        max-width: 83.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-11 {
+        flex: 91.666667%;
+        max-width: 91.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-12 {
+        flex: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-sm-offset-0 {
+        margin-left: 0;
+    }
+    
+    .cl-sm-offset-1 {
+        margin-left: 8.333333%;
+    }
+    
+    .cl-sm-offset-2 {
+        margin-left: 16.666667%;
+    }
+    
+    .cl-sm-offset-3 {
+        margin-left: 25%;
+    }
+    
+    .cl-sm-offset-4 {
+        margin-left: 33.333333%;
+    }
+    
+    .cl-sm-offset-5 {
+        margin-left: 41.666667%;
+    }
+    
+    .cl-sm-offset-6 {
+        margin-left: 50%;
+    }
+    
+    .cl-sm-offset-7 {
+        margin-left: 58.333333%;
+    }
+    
+    .cl-sm-offset-8 {
+        margin-left: 66.666667%;
+    }
+    
+    .cl-sm-offset-9 {
+        margin-left: 75%;
+    }
+    
+    .cl-sm-offset-10 {
+        margin-left: 83.333333%;
+    }
+    
+    .cl-sm-offset-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+/* Responsive column classes for md and up */
+@media screen and (min-width: 768px) {
+    .cl-md-1 {
+        flex: 8.333333%;
+        max-width: 8.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-2 {
+        flex: 16.666667%;
+        max-width: 16.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-3 {
+        flex: 25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-4 {
+        flex: 33.333333%;
+        max-width: 33.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-5 {
+        flex: 41.666667%;
+        max-width: 41.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-6 {
+        flex: 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-7 {
+        flex: 58.333333%;
+        max-width: 58.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-8 {
+        flex: 66.666667%;
+        max-width: 66.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-9 {
+        flex: 75%;
+        max-width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-10 {
+        flex: 83.333333%;
+        max-width: 83.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-11 {
+        flex: 91.666667%;
+        max-width: 91.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-12 {
+        flex: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-md-offset-0 {
+        margin-left: 0;
+    }
+    
+    .cl-md-offset-1 {
+        margin-left: 8.333333%;
+    }
+    
+    .cl-md-offset-2 {
+        margin-left: 16.666667%;
+    }
+    
+    .cl-md-offset-3 {
+        margin-left: 25%;
+    }
+    
+    .cl-md-offset-4 {
+        margin-left: 33.333333%;
+    }
+    
+    .cl-md-offset-5 {
+        margin-left: 41.666667%;
+    }
+    
+    .cl-md-offset-6 {
+        margin-left: 50%;
+    }
+    
+    .cl-md-offset-7 {
+        margin-left: 58.333333%;
+    }
+    
+    .cl-md-offset-8 {
+        margin-left: 66.666667%;
+    }
+    
+    .cl-md-offset-9 {
+        margin-left: 75%;
+    }
+    
+    .cl-md-offset-10 {
+        margin-left: 83.333333%;
+    }
+    
+    .cl-md-offset-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+/* Responsive column classes for lg and up */
+@media screen and (min-width: 992px) {
+    .cl-lg-1 {
+        flex: 8.333333%;
+        max-width: 8.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-2 {
+        flex: 16.666667%;
+        max-width: 16.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-3 {
+        flex: 25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-4 {
+        flex: 33.333333%;
+        max-width: 33.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-5 {
+        flex: 41.666667%;
+        max-width: 41.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-6 {
+        flex: 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-7 {
+        flex: 58.333333%;
+        max-width: 58.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-8 {
+        flex: 66.666667%;
+        max-width: 66.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-9 {
+        flex: 75%;
+        max-width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-10 {
+        flex: 83.333333%;
+        max-width: 83.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-11 {
+        flex: 91.666667%;
+        max-width: 91.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-12 {
+        flex: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-lg-offset-0 {
+        margin-left: 0;
+    }
+    
+    .cl-lg-offset-1 {
+        margin-left: 8.333333%;
+    }
+    
+    .cl-lg-offset-2 {
+        margin-left: 16.666667%;
+    }
+    
+    .cl-lg-offset-3 {
+        margin-left: 25%;
+    }
+    
+    .cl-lg-offset-4 {
+        margin-left: 33.333333%;
+    }
+    
+    .cl-lg-offset-5 {
+        margin-left: 41.666667%;
+    }
+    
+    .cl-lg-offset-6 {
+        margin-left: 50%;
+    }
+    
+    .cl-lg-offset-7 {
+        margin-left: 58.333333%;
+    }
+    
+    .cl-lg-offset-8 {
+        margin-left: 66.666667%;
+    }
+    
+    .cl-lg-offset-9 {
+        margin-left: 75%;
+    }
+    
+    .cl-lg-offset-10 {
+        margin-left: 83.333333%;
+    }
+    
+    .cl-lg-offset-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+/* Responsive column classes for xl and up */
+@media screen and (min-width: 1240px) {
+    .cl-xl-1 {
+        flex: 8.333333%;
+        max-width: 8.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-2 {
+        flex: 16.666667%;
+        max-width: 16.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-3 {
+        flex: 25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-4 {
+        flex: 33.333333%;
+        max-width: 33.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-5 {
+        flex: 41.666667%;
+        max-width: 41.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-6 {
+        flex: 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-7 {
+        flex: 58.333333%;
+        max-width: 58.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-8 {
+        flex: 66.666667%;
+        max-width: 66.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-9 {
+        flex: 75%;
+        max-width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-10 {
+        flex: 83.333333%;
+        max-width: 83.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-11 {
+        flex: 91.666667%;
+        max-width: 91.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-12 {
+        flex: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xl-offset-0 {
+        margin-left: 0;
+    }
+    
+    .cl-xl-offset-1 {
+        margin-left: 8.333333%;
+    }
+    
+    .cl-xl-offset-2 {
+        margin-left: 16.666667%;
+    }
+    
+    .cl-xl-offset-3 {
+        margin-left: 25%;
+    }
+    
+    .cl-xl-offset-4 {
+        margin-left: 33.333333%;
+    }
+    
+    .cl-xl-offset-5 {
+        margin-left: 41.666667%;
+    }
+    
+    .cl-xl-offset-6 {
+        margin-left: 50%;
+    }
+    
+    .cl-xl-offset-7 {
+        margin-left: 58.333333%;
+    }
+    
+    .cl-xl-offset-8 {
+        margin-left: 66.666667%;
+    }
+    
+    .cl-xl-offset-9 {
+        margin-left: 75%;
+    }
+    
+    .cl-xl-offset-10 {
+        margin-left: 83.333333%;
+    }
+    
+    .cl-xl-offset-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+/* Responsive column classes for xxl and up */
+@media screen and (min-width: 1400px) {
+    .cl-xxl-1 {
+        flex: 8.333333%;
+        max-width: 8.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-2 {
+        flex: 16.666667%;
+        max-width: 16.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-3 {
+        flex: 25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-4 {
+        flex: 33.333333%;
+        max-width: 33.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-5 {
+        flex: 41.666667%;
+        max-width: 41.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-6 {
+        flex: 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-7 {
+        flex: 58.333333%;
+        max-width: 58.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-8 {
+        flex: 66.666667%;
+        max-width: 66.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-9 {
+        flex: 75%;
+        max-width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-10 {
+        flex: 83.333333%;
+        max-width: 83.333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-11 {
+        flex: 91.666667%;
+        max-width: 91.666667%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-12 {
+        flex: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .cl-xxl-offset-0 {
+        margin-left: 0;
+    }
+    
+    .cl-xxl-offset-1 {
+        margin-left: 8.333333%;
+    }
+    
+    .cl-xxl-offset-2 {
+        margin-left: 16.666667%;
+    }
+    
+    .cl-xxl-offset-3 {
+        margin-left: 25%;
+    }
+    
+    .cl-xxl-offset-4 {
+        margin-left: 33.333333%;
+    }
+    
+    .cl-xxl-offset-5 {
+        margin-left: 41.666667%;
+    }
+    
+    .cl-xxl-offset-6 {
+        margin-left: 50%;
+    }
+    
+    .cl-xxl-offset-7 {
+        margin-left: 58.333333%;
+    }
+    
+    .cl-xxl-offset-8 {
+        margin-left: 66.666667%;
+    }
+    
+    .cl-xxl-offset-9 {
+        margin-left: 75%;
+    }
+    
+    .cl-xxl-offset-10 {
+        margin-left: 83.333333%;
+    }
+    
+    .cl-xxl-offset-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+
+

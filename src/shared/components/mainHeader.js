@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import { homeMessage } from '../constants/homeConstant';
 import { headerSelector } from '../selectors/header';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import FontIcon from '../components/common/fontAwesomeIcon';
 
-class MainHeader extends React.Component {
+class MainHeaderComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,6 +23,9 @@ class MainHeader extends React.Component {
         const { location } = this.props;
         const { pathname } = location || {};
         const isDevelopment = __ENV__ == 'DEV';
+        
+        // Check if user is logged in
+        const isLoggedIn = window.localStorage && window.localStorage.getItem('bloomkiteBusinessUser');
         return (
             <div className="gray-border1 header-fixed">
                 <div className="container p-0">
@@ -76,78 +79,86 @@ class MainHeader extends React.Component {
                                                     {homeMessage.whyusHeader}
                                                 </Link>
                                             </li> */}
-                                            <li className="nav-item-home hidden-lg-up">
-                                                <Link className="dropdown-item" to="/signup?role=1">
-                                                    Signup {homeMessage.asAdvisor}
-                                                </Link>
-                                                {/* <button
-                                                    className="buttonsign dropdown-toggle"
-                                                    role="button"
-                                                    id="dropdownMenuLink"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <a className="roundButton">Signup</a>
-                                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <Link className="dropdown-item" to="/signup">Investor</Link> 
-                                                        
-                                                    </div>
-                                                </button>*/}
-                                            </li>
-                                            <li className="nav-item-home hidden-lg-up">
-                                                <Link className="dropdown-item" to="/signup?role=3">
-                                                    Signup {homeMessage.asCompany}
-                                                </Link>
-                                            </li>
-                                            {isDevelopment && (
-                                                <li className="nav-item-home hidden-lg-up">
-                                                    <Link className="dropdown-item" to="/signup?role=2">
-                                                        Signup {homeMessage.asInvestor}
-                                                    </Link>
-                                                </li>
+                                            {!isLoggedIn && (
+                                                <>
+                                                    <li className="nav-item-home hidden-lg-up">
+                                                        <Link className="dropdown-item" to="/signup?role=1">
+                                                            Signup {homeMessage.asAdvisor}
+                                                        </Link>
+                                                        {/* <button
+                                                            className="buttonsign dropdown-toggle"
+                                                            role="button"
+                                                            id="dropdownMenuLink"
+                                                            data-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <a className="roundButton">Signup</a>
+                                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                <Link className="dropdown-item" to="/signup">Investor</Link> 
+                                                                
+                                                            </div>
+                                                        </button>*/}
+                                                    </li>
+                                                    <li className="nav-item-home hidden-lg-up">
+                                                        <Link className="dropdown-item" to="/signup?role=3">
+                                                            Signup {homeMessage.asCompany}
+                                                        </Link>
+                                                    </li>
+                                                    {isDevelopment && (
+                                                        <li className="nav-item-home hidden-lg-up">
+                                                            <Link className="dropdown-item" to="/signup?role=2">
+                                                                Signup {homeMessage.asInvestor}
+                                                            </Link>
+                                                        </li>
+                                                    )}
+                                                    <li className="nav-item-home hidden-lg-up">
+                                                        <button className="buttonsign login-btn">
+                                                            <Link to="/login" className={`roundButton`}>
+                                                                {homeMessage.loggingIn}
+                                                            </Link>
+                                                        </button>
+                                                    </li>
+                                                </>
                                             )}
-                                            <li className="nav-item-home hidden-lg-up">
+                                        </ul>
+                                    </div>
+                                    {!isLoggedIn && (
+                                        <>
+                                            <div className="home-header1 hidden-lg-down">
+                                                <div className="dropdown show">
+                                                    <button
+                                                        className="buttonsign signup-btn dropdown-toggle"
+                                                        role="button"
+                                                        id="dropdownMenuLink1"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <a className="roundButton">Signup</a>
+                                                    </button>
+                                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                                        {isDevelopment && (
+                                                            <Link className="dropdown-item" to="/signup?role=2">
+                                                                {homeMessage.asInvestor}
+                                                            </Link>
+                                                        )}
+                                                        <Link className="dropdown-item" to="/signup?role=1">
+                                                            {homeMessage.asAdvisor}
+                                                        </Link>
+                                                        <Link className="dropdown-item" to="/signup?role=3">
+                                                            {homeMessage.asCompany}
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="home-header2 hidden-lg-down">
                                                 <button className="buttonsign login-btn">
                                                     <Link to="/login" className={`roundButton`}>
                                                         {homeMessage.loggingIn}
                                                     </Link>
                                                 </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className="home-header1 hidden-lg-down">
-                                        <div className="dropdown show">
-                                            <button
-                                                className="buttonsign signup-btn dropdown-toggle"
-                                                role="button"
-                                                id="dropdownMenuLink1"
-                                                data-toggle="dropdown"
-                                                aria-haspopup="true"
-                                                aria-expanded="false">
-                                                <a className="roundButton">Signup</a>
-                                            </button>
-                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink1">
-                                                {isDevelopment && (
-                                                    <Link className="dropdown-item" to="/signup?role=2">
-                                                        {homeMessage.asInvestor}
-                                                    </Link>
-                                                )}
-                                                <Link className="dropdown-item" to="/signup?role=1">
-                                                    {homeMessage.asAdvisor}
-                                                </Link>
-                                                <Link className="dropdown-item" to="/signup?role=3">
-                                                    {homeMessage.asCompany}
-                                                </Link>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div className="home-header2 hidden-lg-down">
-                                        <button className="buttonsign login-btn">
-                                            <Link to="/login" className={`roundButton`}>
-                                                {homeMessage.loggingIn}
-                                            </Link>
-                                        </button>
-                                    </div>
+                                        </>
+                                    )}
                                 </nav>
                             </div>
                         </div>
@@ -160,4 +171,10 @@ class MainHeader extends React.Component {
 
 const mapStateToProps = (state) => headerSelector(state);
 
-export default connect(mapStateToProps, {})(withRouter(MainHeader));
+// Wrapper component to provide location via useLocation hook
+const MainHeader = (props) => {
+    const location = useLocation();
+    return <MainHeaderComponent {...props} location={location} />;
+};
+
+export default connect(mapStateToProps, {})(MainHeader);

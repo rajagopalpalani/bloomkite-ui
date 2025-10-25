@@ -1,14 +1,21 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
   },
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es2022": true
   },
   "rules": {
     "indent": ["error", 4],
@@ -16,15 +23,18 @@
     "class-methods-use-this": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "settings": {
     "react": {
-      "version": "16.5"
+      "version": "detect"
     }
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ]
 }

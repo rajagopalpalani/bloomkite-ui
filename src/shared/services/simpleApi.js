@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toastrError, toastrSuccess } from '../helpers/toastrHelper';
 import { toastrMessage } from '../constants/toastrMessage';
 
-export const API = axios.create({ baseURL: 'https://api-prod.bloomkite.com/app/' });
+export const API = axios.create({ baseURL: 'http://localhost:8080/' });
 
 API.interceptors.request.use(
     function (config) {

@@ -1,6 +1,5 @@
 import React from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import LightboxWrapper from '../common/LightboxWrapper';
 import classNames from 'classnames';
 
 class Promotion extends React.Component {
@@ -30,22 +29,14 @@ class Promotion extends React.Component {
                 </a>
                 <img className={classNames('card-img-top', {' image-cursor' : fileUrl})} onClick={fileUrl ? () => this.setState({ isOpen: true }) : () => {}} src={imgUrl} alt={title} />
                 {isOpen && images && (
-                    <Lightbox
-                        mainSrc={images[photoIndex].fileUrl}
-                        imageTitle={images[photoIndex].title}
-                        nextSrc={images[(photoIndex + 1) % images.length].fileUrl}
-                        prevSrc={images[(photoIndex + images.length - 1) % images.length].fileUrl}
-                        onMovePrevRequest={() =>
-                            this.setState({
-                                photoIndex: (photoIndex + images.length - 1) % images.length
-                            })
-                        }
-                        onMoveNextRequest={() =>
-                            this.setState({
-                                photoIndex: (photoIndex + 1) % images.length
-                            })
-                        }
-                        onCloseRequest={() => this.setState({ isOpen: false })}
+                    <LightboxWrapper
+                        open={isOpen}
+                        close={() => this.setState({ isOpen: false })}
+                        index={photoIndex}
+                        slides={images.map(img => ({ src: img.fileUrl, title: img.title }))}
+                        on={{
+                            view: ({ index }) => this.setState({ photoIndex: index })
+                        }}
                     />
                 )}
                 {showBody && (

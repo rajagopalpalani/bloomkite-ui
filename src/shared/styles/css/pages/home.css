@@ -1,0 +1,434 @@
+.prod-design {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.buttonsign {
+    border-style: none;
+    background-color: #fff;
+    text-align: center !important;
+    border-radius: 10px !important;
+    font-size: 18px;
+    margin: 5px 10px;
+}
+
+.buttonsign.login-btn {
+    background: #7142ed;
+}
+
+.buttonsign.login-btn a {
+    color: #fff !important;
+}
+
+.buttonsign.signup-btn {
+    background: #fff;
+}
+
+.buttonsign a {
+    padding: 4px 12px;
+    font-size: 18px;
+}
+
+.buttonsign a:focus {
+    outline: none;
+}
+
+.contactButton {
+    font-size: 16px;
+    text-align: center !important;
+    text-decoration: none !important;
+    padding: 11px 140px;
+}
+
+.contact-head {
+    color: rgb(128, 128, 128);
+    font-size: 16px;
+}
+
+.signupButton {
+    text-align: center !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    background-color: #002b48;
+}
+
+.signupButton:hover {
+    background-color: #251534 !important;
+}
+
+.signupdropdown-item {
+    line-height: 2;
+    margin: 0;
+    padding: 0 15px;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 16px;
+}
+
+.signupdropdown-item:hover {
+    background: #251534;
+    color: #fff !important;
+}
+
+.contact-or {
+    color: rgb(128, 128, 128);
+    font-size: 15px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.contactButtonStyle {
+    border-style: solid;
+    border-color: #e0ebeb;
+    background-color: #fff;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 0px;
+    text-decoration-color: #fff;
+    border-radius: 0.35rem;
+    width: 330px;
+    height: 40px;
+}
+
+.contactButtonStyle a {
+    color: #251534;
+}
+
+.contactButtonStyle a:hover {
+    color: #fff !important;
+}
+
+.contactButtonSignup {
+    border-style: solid;
+    border-color: #e0ebeb;
+    background-color: #251534;
+    text-align: center;
+    font-size: 16px;
+    margin: 12px 0px;
+    color: #fff !important;
+    text-decoration-color: #fff;
+    border-radius: 16px !important;
+    width: 100px;
+    height: 35px;
+}
+
+.contactButtonStyle:hover {
+    background-color: #251534 !important;
+    color: #fff !important;
+}
+
+.contactButtonSignup:hover {
+    background-color: #fff !important;
+    color: #251534 !important;
+}
+
+.contact-bottom {
+    margin: 35px;
+}
+
+.contact-dropdown {
+    transform: translate3d(4px, 45px, 0px) !important;
+    min-width: 8rem !important;
+}
+
+.contact-design {
+    color: rgb(128, 128, 128);
+    font-size: 16px;
+    margin: 20px 5px;
+    display: inline-block;
+}
+
+.home-header2 .buttonsign {
+    margin-right: 0;
+}
+
+.fixed-layout {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.bk-home-banner {
+    background-color: #251534;
+    color: #fff;
+    position: relative;
+    height: calc(100vh - 25px);
+    width: 100%;
+    background-image: url('../../images/home_1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bk-home-banner .home-banner-overlay {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.8;
+    background-color: #251534;
+}
+
+.bk-home-banner .bd-lead {
+    text-align: center;
+    position: relative;
+}
+
+.bk-home-banner .bd-lead p {
+    width: auto;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.bk-home-banner .bd-image {
+    width: 50%;
+    line-height: 1.6;
+    font-size: 26px;
+    line-height: 35px;
+}
+
+.bk-home-banner .bd-image img {
+    top: 120px;
+    position: relative;
+    margin: auto;
+    display: block;
+    left: 0px;
+    right: 0px;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.bk-home-banner .bk-banner-layout {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18%;
+}
+
+.bk-home-work .container {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.bk-home-work .works {
+    margin-top: 2rem;
+}
+
+.bk-home-work .works .work-item {
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 5px 0px #7f7f7f;
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 1rem;
+}
+
+.bk-home-work .works .work-item p {
+    margin-bottom: 0px;
+}
+
+.bk-home-solutions {
+    background-color: #fff;
+}
+
+.bk-home-solutions .solutions {
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.bk-home-solutions .solutions:hover {
+    box-shadow: 0px 0px 5px 0px #7f7f7f;
+    cursor: pointer;
+}
+
+.title-font {
+    font-weight: 600;
+}
+
+.icon-align {
+    margin-right: 5px;
+}
+
+.bk-home-footer {
+    background-color: #251534;
+    padding: 1rem 0;
+    color: #fff;
+    margin-top: 0;
+    bottom: 0;
+    width: 100%;
+    position: relative; 
+}
+
+.bk-home-footer .footer-home {
+    display: inline-block;
+}
+
+.bk-home-footer .bk-flex-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bk-home-footer .bk-flex-start a i {
+    font-size: 20px;
+    color: #fff;
+    float: none;
+    transform: none;
+}
+
+.home-header1 {
+    color: #251534 !important;
+    margin-right: 0px;
+}
+
+.bk-home-work .work-image img {
+    position: relative;
+    margin: auto;
+    display: block;
+    left: 0px;
+    right: 0px;
+    border-radius: 10px;
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+}
+
+.solutions img {
+    height: 30px;
+    width: auto;
+}
+
+.bloomkite-social {
+    display: inline-block;
+}
+
+.bloomkite-social li a i {
+    display: inline-block;
+}
+
+.facebook-icon a {
+    font-size: 30px;
+    color: #fff !important;
+}
+
+.text-muted {
+    font-size: 20px;
+    line-height: 23px;
+    color: #b4b8bb !important;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.whyus-content {
+    margin-top: 30px;
+}
+
+.home-page {
+    background-color: #f5f5f5;
+}
+
+.copyright-text {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 991px) {
+    .main-container {
+        margin-top: 60px;
+    }
+    
+    .bk-banner-layout {
+        margin-top: 5%;
+    }
+    
+    .buttonsign {
+        border: none;
+    }
+    
+    .bk-home-work .works .work-item {
+        margin: 20px 0;
+    }
+    
+    .bk-home-banner {
+        height: calc(100vh - 25px);
+    }
+    
+    .bk-home-banner .bd-lead p {
+        width: auto;
+    }
+    
+    .bk-home-banner .bd-image img {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-container {
+        margin-top: 60px;
+    }
+    
+    .bk-home-banner {
+        height: auto;
+    }
+    
+    .bk-home-banner .bk-banner-layout {
+        margin-top: 5%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .bk-home-banner .fixed-layout {
+        padding: 0 5%;
+    }
+    
+    .bk-home-banner .bd-image {
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+    }
+    
+    .banner2-background {
+        height: auto;
+    }
+}
+
+@media (min-width: 767px) {
+    .bk-home-work .works {
+        margin-top: 0px;
+    }
+
+    .bk-home-work .work-image img {
+        margin: 0;
+    }
+}
+
+.title-margin-align {
+    margin-right: 100px;
+}
+
+.signup-design-adv {
+    padding: 6px 24px !important;
+}
+
+.signup-design-corp {
+    padding: 6px 14px !important;
+}
+
+.signup-design-inv {
+    padding: 6px 22px !important;
+}
+
+.contact-details {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    .bk-home-footer {
+        position: static;
+    }    
+}
+

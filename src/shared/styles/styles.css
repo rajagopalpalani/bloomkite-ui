@@ -13,10 +13,10 @@
 @font-face {
     font-family: GilroyMedium;
     src: local('GilroyMedium'), local('GilroyMedium');
-    src: url('./images/fonts/Gilroy-Medium.eot');
-    src: url('./images/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'), url('./images/fonts/Gilroy-Medium.woff') format('woff'),
-        url('./images/fonts/Gilroy-Medium.woff2') format('woff2') url('./images/fonts/Gilroy-Medium.ttf') format('truetype'),
-        url('./images/fonts/Gilroy-Medium.svg#GilroyMedium') format('svg'), url('./images/fonts/Gilroy-Medium.otf') format('opentype');
+    src: url('../images/fonts/Gilroy-Medium.eot');
+    src: url('../images/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'), url('../images/fonts/Gilroy-Medium.woff') format('woff'),
+        url('../images/fonts/Gilroy-Medium.woff2') format('woff2') url('../images/fonts/Gilroy-Medium.ttf') format('truetype'),
+        url('../images/fonts/Gilroy-Medium.svg#GilroyMedium') format('svg'), url('../images/fonts/Gilroy-Medium.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -25,10 +25,10 @@
 @font-face {
     font-family: GilroySemiBold;
     src: local('GilroySemiBold'), local('GilroySemiBold');
-    src: url('./images/fonts/Gilroy-SemiBold.eot');
-    src: url('./images/fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'), url('./images/fonts/Gilroy-SemiBold.woff') format('woff'),
-        url('./images/fonts/Gilroy-SemiBold.woff2') format('woff2') url('./images/fonts/Gilroy-SemiBold.ttf') format('truetype'),
-        url('./images/fonts/Gilroy-SemiBold.svg#GilroySemiBold') format('svg'), url('./images/fonts/Gilroy-SemiBold.otf') format('opentype');
+    src: url('../images/fonts/Gilroy-SemiBold.eot');
+    src: url('../images/fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'), url('../images/fonts/Gilroy-SemiBold.woff') format('woff'),
+        url('../images/fonts/Gilroy-SemiBold.woff2') format('woff2') url('../images/fonts/Gilroy-SemiBold.ttf') format('truetype'),
+        url('../images/fonts/Gilroy-SemiBold.svg#GilroySemiBold') format('svg'), url('../images/fonts/Gilroy-SemiBold.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -37,10 +37,10 @@
 @font-face {
     font-family: GilroyBold;
     src: local('GilroyBold'), local('GilroyBold');
-    src: url('./images/fonts/Gilroy-Bold.eot');
-    src: url('./images/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'), url('./images/fonts/Gilroy-Bold.woff') format('woff'),
-        url('./images/fonts/Gilroy-Bold.woff2') format('woff2') url('./images/fonts/Gilroy-Bold.ttf') format('truetype'),
-        url('./images/fonts/Gilroy-Bold.svg#GilroyBold') format('svg'), url('./images/fonts/Gilroy-Bold.otf') format('opentype');
+    src: url('../images/fonts/Gilroy-Bold.eot');
+    src: url('../images/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'), url('../images/fonts/Gilroy-Bold.woff') format('woff'),
+        url('../images/fonts/Gilroy-Bold.woff2') format('woff2') url('../images/fonts/Gilroy-Bold.ttf') format('truetype'),
+        url('../images/fonts/Gilroy-Bold.svg#GilroyBold') format('svg'), url('../images/fonts/Gilroy-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -49,10 +49,10 @@
 @font-face {
     font-family: GilroyExtraBold;
     src: local('GilroyExtraBold'), local('GilroyExtraBold');
-    src: url('./images/fonts/Gilroy-ExtraBold.eot');
-    src: url('./images/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'), url('./images/fonts/Gilroy-ExtraBold.woff') format('woff'),
-        url('./images/fonts/Gilroy-ExtraBold.woff2') format('woff2') url('./images/fonts/Gilroy-ExtraBold.ttf') format('truetype'),
-        url('./images/fonts/Gilroy-ExtraBold.svg#GilroyExtraBold') format('svg'), url('./images/fonts/Gilroy-ExtraBold.otf') format('opentype');
+    src: url('../images/fonts/Gilroy-ExtraBold.eot');
+    src: url('../images/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../images/fonts/Gilroy-ExtraBold.woff') format('woff'),
+        url('../images/fonts/Gilroy-ExtraBold.woff2') format('woff2') url('../images/fonts/Gilroy-ExtraBold.ttf') format('truetype'),
+        url('../images/fonts/Gilroy-ExtraBold.svg#GilroyExtraBold') format('svg'), url('../images/fonts/Gilroy-ExtraBold.otf') format('opentype');
     font-weight: bolder;
     font-style: normal;
     font-display: swap;

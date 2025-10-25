@@ -8,6 +8,7 @@ import { toastrMessage } from '../constants/toastrMessage';
 import { APP_STATE } from '../actions/actionTypes';
 
 export const getSignupDetails = (payload) => {
+    console.log("API Called")
     return API.post(`${pageURI.signup}`, payload).then((response) => {
         return response.data;
     });

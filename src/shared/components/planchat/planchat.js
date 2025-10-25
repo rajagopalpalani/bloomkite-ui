@@ -8,7 +8,7 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { planningMessage } from '../../constants/planningConstant';
 import FontIcon from '../common/fontAwesomeIcon';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { TextareaAutosize } from '@material-ui/core';
+import { TextareaAutosize } from '@mui/material';
 
 class PlanChat extends Component {
     constructor(props) {

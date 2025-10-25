@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import CustomReactTooltip from '../common/customReactTooltip';
 import PopUp from '../popup';
 import { signupUser } from '../../actions/signup';
@@ -228,7 +228,7 @@ class CorporateSignup extends React.Component {
         return (
             <div id="signup" className="new-signup-details">
                 {this.props.loggedDetails && this.props.loggedDetails.roleBasedId && <Redirect to="corporate" />}
-                <form action="#" method="post" autoComplete={false} onSubmit={this.handleSignup}>
+                <form action="#" method="post" autoComplete="off" onSubmit={this.handleSignup}>
                     <div id="individual" className="signup-form-group">
                         <div className="row">
                             <div className="col-xs-6 signup-box-top box-side">

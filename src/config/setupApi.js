@@ -5,9 +5,9 @@ const setupApi = function (appEnv) {
         case 'STAGE':
             return 'https://api-prod.bloomkite.com/app';
         case 'DEV':
-            return 'http://bloomkite-api-d.us-east-2.elasticbeanstalk.com/app';
+            return 'http://localhost:8080';
         default:
-            return 'http://bloomkite-api-d.us-east-2.elasticbeanstalk.com/app';
+            return 'http://localhost:8080';
     };
 };
 

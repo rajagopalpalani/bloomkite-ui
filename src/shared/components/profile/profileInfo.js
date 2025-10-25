@@ -1,6 +1,5 @@
 import React from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import LightboxWrapper from '../common/LightboxWrapper';
 import classNames from 'classnames';
 import FontIcon from '../common/fontAwesomeIcon';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
@@ -25,7 +24,7 @@ class ProfileInfo extends React.Component {
                     src={imagePath}
                     alt={'profile image'}
                 />
-                {this.state.isOpen && <Lightbox mainSrc={imagePath} onCloseRequest={() => this.setState({ isOpen: false })} />}
+                {this.state.isOpen && <LightboxWrapper open={this.state.isOpen} close={() => this.setState({ isOpen: false })} slides={[{ src: imagePath }]} />}
                 <div className="bloomkite-profile-info">
                     {displayName && <h4 className="profile-name">{displayName}</h4>}
                     {designation && <h5 className="profile-designation">{designation}</h5>}

@@ -10,7 +10,7 @@ import PlanningHeader from '../planningHeader';
 import PlanningLeftbar from '../planningLeftside';
 import { insuranceSelector } from '../../../selectors/planning';
 import { calculateInsurance } from '../../../actions/planning';
-import { setTimeout } from 'timers';
+// setTimeout is available globally in both Node.js and browsers
 import Error from '../common/error';
 import { planningMessage } from '../../../constants/planningConstant';
 import { formatMoney, formatLoanAmount, Helper } from '../../../helpers/planningHelper';

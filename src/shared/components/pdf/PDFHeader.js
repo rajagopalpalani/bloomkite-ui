@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Image, View, StyleSheet } from '@react-pdf/renderer';
-import bloomkiteLogo from '../../../images/logo.png';
+// Use URL instead of direct import to avoid SSR issues
+const bloomkiteLogo = '/images/logo.png';
 
 const styles = StyleSheet.create({
     logoContainer: {

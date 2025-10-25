@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { apibaseURI } from '../constants/apiAttributes';
 import { headerSelector } from '../selectors/header';
 import { ChatContext } from '../components/chats/Chat.context';
@@ -315,4 +315,4 @@ class UserHeader extends React.Component {
 
 const mapStateToProps = (state) => headerSelector(state);
 
-export default connect(mapStateToProps, {})(withRouter(UserHeader));
+export default connect(mapStateToProps, {})(UserHeader);

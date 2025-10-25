@@ -1,6 +1,5 @@
 import React from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import LightboxWrapper from '../common/LightboxWrapper';
 import classNames from 'classnames';
 
 class Promotions extends React.Component {
@@ -32,22 +31,14 @@ class Promotions extends React.Component {
                                         alt={'profile image'}
                                     />
                                     {isOpen && (
-                                        <Lightbox
-                                            mainSrc={list[photoIndex].imagePath}
-                                            imageTitle={list[photoIndex].title}
-                                            nextSrc={list[(photoIndex + 1) % list.length].imagePath}
-                                            prevSrc={list[(photoIndex + list.length - 1) % list.length].imagePath}
-                                            onMovePrevRequest={() =>
-                                                this.setState({
-                                                    photoIndex: (photoIndex + list.length - 1) % list.length
-                                                })
-                                            }
-                                            onMoveNextRequest={() =>
-                                                this.setState({
-                                                    photoIndex: (photoIndex + 1) % list.length
-                                                })
-                                            }
-                                            onCloseRequest={() => this.setState({ isOpen: false })}
+                                        <LightboxWrapper
+                                            open={isOpen}
+                                            close={() => this.setState({ isOpen: false })}
+                                            index={photoIndex}
+                                            slides={list.map(img => ({ src: img.imagePath, title: img.title }))}
+                                            on={{
+                                                view: ({ index }) => this.setState({ photoIndex: index })
+                                            }}
                                         />
                                     )}
                                 </div>

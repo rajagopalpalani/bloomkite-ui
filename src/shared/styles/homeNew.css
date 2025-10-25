@@ -1,7 +1,7 @@
 .banner2-background {
     position: relative;
     background: #e0beb1;
-    background-image: url('/images/home_2.webp');
+    background-image: url('../images/home_2.webp');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -151,7 +151,7 @@
     position: absolute;
     width: 355px;
     height: 498px;
-    background: url(/images/home_window.webp);
+    background: url(../images/home_window.webp);
     display: inline-block;
     right: 3%;
 }

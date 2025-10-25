@@ -16,7 +16,7 @@ import { calculateRiskProfile, fetchRiskQuestionaireList } from '../../../action
 import { planningMessage } from '../../../constants/planningConstant';
 import PdfRiskProfile from '../../../components/planning/pdfRiskProfile';
 import ContactPopupSignup from '../../Contact/contactPopupSignup';
-import { setTimeout } from 'timers';
+// setTimeout is available globally in both Node.js and browsers
 import CalcHeader from '../calcHeader';
 import CustomFormik from '../../common/customFormik';
 import CustomFieldArray from '../../common/customFieldArray';

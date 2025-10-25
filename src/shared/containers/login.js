@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginUser } from '../actions/login';
 import loginSelector from '../selectors/login';
@@ -75,9 +75,9 @@ class Login extends React.Component {
         const styles = cx('show-password', { active: showPassword });
         return (
             <div className="signin-container" id="signin">
-                {this.state.redirect && this.props.loggedDetails && this.props.loggedDetails.roleBasedId && this.props.loggedDetails.roleId == 1 && <Redirect to="dashboard" />}
-                {this.state.redirect && this.props.loggedDetails && this.props.loggedDetails.roleBasedId && this.props.loggedDetails.roleId == 2 && <Redirect to="dashboard" />}
-                {this.state.redirect && this.props.loggedDetails && this.props.loggedDetails.roleBasedId && this.props.loggedDetails.roleId == 3 && <Redirect to="dashboard" />}
+                {this.state.redirect && this.props.loggedDetails && this.props.loggedDetails.roleBasedId && this.props.loggedDetails.roleId == 1 && <Navigate to="/dashboard" replace />}
+                {this.state.redirect && this.props.loggedDetails && this.props.loggedDetails.roleBasedId && this.props.loggedDetails.roleId == 2 && <Navigate to="/dashboard" replace />}
+                {this.state.redirect && this.props.loggedDetails && this.props.loggedDetails.roleBasedId && this.props.loggedDetails.roleId == 3 && <Navigate to="/dashboard" replace />}
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 nopadding sp-design">

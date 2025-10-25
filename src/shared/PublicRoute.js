@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import AsyncComponent from '../shared/components/asyncComponent';
+import { Navigate, useLocation } from 'react-router-dom';
 
 const getUrl = (roleId) => {
     switch (roleId) {
@@ -13,26 +12,21 @@ const getUrl = (roleId) => {
     }
 };
 
-export const PublicRoute = ({ component, ...rest }) => {
-    const { path } = rest;
+export const PublicRoute = ({ children, path }) => {
+    const location = useLocation();
     const token = localStorage.getItem('bloomkiteBusinessUser');
     const user = localStorage.getItem('bloomkiteUsername');
     const isLoginPage = path === '/login';
     const isSignupPage = path === '/signup';
     const redirect = !!(isLoginPage && token);
+    
     if (redirect) {
         const { roleId } = JSON.parse(user);
         const url = getUrl(roleId);
-        return (
-            <Redirect
-                to={{
-                    pathname: url,
-                    state: { from: rest.location }
-                }}
-            />
-        );
+        return <Navigate to={url} state={{ from: location }} replace />;
     }
-    return <Route {...rest} component={(props) => <AsyncComponent {...props} component={component} publicRoute={true} isNewDesign={isLoginPage || isSignupPage} />} />;
+    
+    return children;
 };
 
 export default PublicRoute;

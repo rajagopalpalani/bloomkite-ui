@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import CustomReactTooltip from '../common/customReactTooltip';
 import PopUp from '../popup';
 import { signupUser, validateUniqueFields } from '../../actions/signup';

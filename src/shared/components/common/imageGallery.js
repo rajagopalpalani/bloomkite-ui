@@ -1,6 +1,5 @@
 import React from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import LightboxWrapper from './LightboxWrapper';
 import classNames from 'classnames';
 
 class ImageGallery extends React.Component {
@@ -22,22 +21,14 @@ class ImageGallery extends React.Component {
                 </a>
                 <img className={classNames({' image-cursor': url})} onClick={url ? () => this.setState({ isOpen: true }) : () => {}} src={url} alt={name} />
                 {isOpen && images && (
-                    <Lightbox
-                        mainSrc={images[photoIndex].imagePath}
-                        imageTitle={images[photoIndex].title}
-                        nextSrc={images[(photoIndex + 1) % images.length].imagePath}
-                        prevSrc={images[(photoIndex + images.length - 1) % images.length].imagePath}
-                        onMovePrevRequest={() =>
-                            this.setState({
-                                photoIndex: (photoIndex + images.length - 1) % images.length
-                            })
-                        }
-                        onMoveNextRequest={() =>
-                            this.setState({
-                                photoIndex: (photoIndex + 1) % images.length
-                            })
-                        }
-                        onCloseRequest={() => this.setState({ isOpen: false })}
+                    <LightboxWrapper
+                        open={isOpen}
+                        close={() => this.setState({ isOpen: false })}
+                        index={photoIndex}
+                        slides={images.map(img => ({ src: img.imagePath, title: img.title }))}
+                        on={{
+                            view: ({ index }) => this.setState({ photoIndex: index })
+                        }}
                     />
                 )}
             </div>

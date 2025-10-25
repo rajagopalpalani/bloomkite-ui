@@ -1,5 +1,5 @@
 //const apibaseURI = "http://bloomkite-dev.us-east-1.elasticbeanstalk.com";
-const apibaseURI = 'https://api-prod.bloomkite.com/app';
+const apibaseURI = 'http://localhost:8080';
 const prefix = '';
 const pageURI = {
     login: `${prefix}/signin`,

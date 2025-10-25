@@ -1,81 +1,57 @@
 import React from 'react';
-import loadable from '@loadable/component';
 import Loader from './shared/components/common/loader';
 
-export const Advisor = loadable(() => import('./shared/containers/advisor/advisor'), {
-    fallback: <Loader loading={true} />
-});
-export const Investor = loadable(() => import('./shared/containers/investor/investor'), {
-    fallback: <Loader loading={true} />
-});
-export const Corporate = loadable(() => import('./shared/containers/corporate/corporate'), {
-    fallback: <Loader loading={true} />
-});
-export const Planning = loadable(() => import('./shared/containers/planning/planning'), {
-    fallback: <Loader loading={true} />
-});
-export const PlanningLanding = loadable(() => import('./shared/containers/planning/planningLanding'), {
-    fallback: <Loader loading={true} />
-});
-export const PlanningStatic = loadable(() => import('./shared/containers/planning/planningStatic'), {
-    fallback: <Loader loading={true} />
-});
-export const Explore = loadable(() => import('./shared/containers/explore/explore'), {
-    fallback: <Loader loading={true} />
-});
-export const Blog = loadable(() => import('./shared/containers/blog/blog'), {
-    fallback: <Loader loading={true} />
-});
-export const Product = loadable(() => import('./shared/containers/product/product'), {
-    fallback: <Loader loading={true} />
-});
-export const Howitworks = loadable(() => import('./shared/containers/howItWorks/howItWorks'), {
-    fallback: <Loader loading={true} />
-});
-export const Academy = loadable(() => import('./shared/containers/academy/academy'), {
-    fallback: <Loader loading={true} />
-});
+// Synchronous imports for React 16 SSR compatibility
+import Advisor from './shared/containers/advisor/advisor';
+import Investor from './shared/containers/investor/investor';
+import Corporate from './shared/containers/corporate/corporate';
+import Planning from './shared/containers/planning/planning';
+import PlanningLanding from './shared/containers/planning/planningLanding';
+import PlanningStatic from './shared/containers/planning/planningStatic';
+import Explore from './shared/containers/explore/explore';
+import Blog from './shared/containers/blog/blog';
+import Product from './shared/containers/product/product';
+import Howitworks from './shared/containers/howItWorks/howItWorks';
+import Academy from './shared/containers/academy/academy';
+import Privacy from './shared/containers/privacy';
+import NotFound from './shared/containers/notFound';
+import Login from './shared/containers/login';
+import Signup from './shared/containers/signup';
+import Profile from './shared/containers/profile';
+import ResetPassword from './shared/containers/accountDetails/resetPassword';
+import ForgetPassword from './shared/containers/accountDetails/forgetPassword';
+import MailVerification from './shared/containers/accountDetails/mailVerification';
+import WhyUs from './shared/containers/whyUs/whyUs';
+import Calculator from './shared/containers/calculator/calculator';
+import ErrorBoundary from './shared/containers/errorBoundary';
+import DashBoard from './shared/containers/dashBoard';
+import TermsAndConditions from './shared/containers/terms&Conditions';
+import Faq from './shared/containers/faq';
 
-export const Privacy = loadable(() => import('./shared/containers/privacy'), {
-    fallback: <Loader loading={true} />
-});
-export const NotFound = loadable(() => import('./shared/containers/notFound'), {
-    fallback: <Loader loading={true} />
-});
-export const Login = loadable(() => import('./shared/containers/login'), {
-    fallback: <Loader loading={true} />
-});
-export const Signup = loadable(() => import('./shared/containers/signup'), {
-    fallback: <Loader loading={true} />
-});
-export const Profile = loadable(() => import('./shared/containers/profile'), {
-    fallback: <Loader loading={true} />
-});
-export const ResetPassword = loadable(() => import('./shared/containers/accountDetails/resetPassword'), {
-    fallback: <Loader loading={true} />
-});
-export const ForgetPassword = loadable(() => import('./shared/containers/accountDetails/forgetPassword'), {
-    fallback: <Loader loading={true} />
-});
-export const MailVerification = loadable(() => import('./shared/containers/accountDetails/mailVerification'), {
-    fallback: <Loader loading={true} />
-});
-export const WhyUs = loadable(() => import('./shared/containers/whyUs/whyUs'), {
-    fallback: <Loader loading={true} />
-});
-export const Calculator = loadable(() => import('./shared/containers/calculator/calculator'), {
-    fallback: <Loader loading={true} />
-});
-export const ErrorBoundary = loadable(() => import('./shared/containers/errorBoundary'), {
-    fallback: <Loader loading={true} />
-});
-export const DashBoard = loadable(() => import('./shared/containers/dashBoard'), {
-    fallback: <Loader loading={true} />
-});
-export const TermsAndConditions = loadable(() => import('./shared/containers/terms&Conditions'), {
-    fallback: <Loader loading={true} />
-});
-export const Faq = loadable(() => import('./shared/containers/faq'), {
-    fallback: <Loader loading={true} />
-});
+// Export components directly for React 16 SSR compatibility
+export { Advisor };
+export { Investor };
+export { Corporate };
+export { Planning };
+export { PlanningLanding };
+export { PlanningStatic };
+export { Explore };
+export { Blog };
+export { Product };
+export { Howitworks };
+export { Academy };
+export { Privacy };
+export { NotFound };
+export { Login };
+export { Signup };
+export { Profile };
+export { ResetPassword };
+export { ForgetPassword };
+export { MailVerification };
+export { WhyUs };
+export { Calculator };
+export { ErrorBoundary };
+export { DashBoard };
+export { TermsAndConditions };
+export { Faq };
 

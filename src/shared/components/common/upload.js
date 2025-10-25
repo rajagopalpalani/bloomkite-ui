@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Loader from 'react-loader-spinner';
+import { Oval } from 'react-loader-spinner';
 import ImageGallery from './imageGallery';
 import FontIcon from '../common/fontAwesomeIcon';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
@@ -205,7 +205,7 @@ class Upload extends React.Component {
     renderLoader = () => {
         return (
             <div className="file-list-item preview loader">
-                <Loader type="Rings" color="#251534" height={50} width={50} />
+                <Oval color="#251534" height={50} width={50} />
             </div>
         );
     };
