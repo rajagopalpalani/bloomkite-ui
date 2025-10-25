@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="14px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0672289157 0.134457831 6.4539759 0.134457831 6.4539759 6.52118801 0.0672289157 6.52118801"></polygon>
+        <polygon id="path-3" points="1.68072289e-05 -6.72289157e-05 11.5633735 -6.72289157e-05 11.5633735 6.89089663 1.68072289e-05 6.89089663"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sign-Up" transform="translate(-628.000000, -288.000000)">
+            <g id="Group-7" transform="translate(628.000000, 288.000000)">
+                <g id="Group-3" transform="translate(2.521084, 0.033614)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M3.26060241,6.52118801 C5.02536145,6.52118801 6.4539759,5.09257355 6.4539759,3.32781452 C6.4539759,1.56305548 5.02536145,0.134441024 3.26060241,0.134441024 C1.49584337,0.134441024 0.0672289157,1.56305548 0.0672289157,3.32781452 C0.0672289157,5.09257355 1.49584337,6.52118801 3.26060241,6.52118801" id="Fill-1" fill="#218FC3" mask="url(#mask-2)"></path>
+                </g>
+                <g id="Group-6" transform="translate(0.000000, 6.924578)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-5"></g>
+                    <path d="M0.504233675,6.89089663 L11.0591734,6.89089663 C11.3448963,6.89089663 11.5633903,6.67240265 11.5633903,6.38667976 L11.5633903,4.53788458 C11.5633903,2.03377554 9.5297156,-6.72289157e-05 7.02543849,-6.72289157e-05 L4.53796861,-6.72289157e-05 C2.03369151,-6.72289157e-05 1.68072289e-05,2.03377554 1.68072289e-05,4.53788458 L1.68072289e-05,6.38667976 C1.68072289e-05,6.67240265 0.218510783,6.89089663 0.504233675,6.89089663" id="Fill-4" fill="#218FC3" mask="url(#mask-4)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
