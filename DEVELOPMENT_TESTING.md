@@ -10,13 +10,13 @@ This document describes the development environment setup for testing React comp
    ```
 
 2. **Access the testing pages:**
-   - Main App: `http://localhost:8000/` (includes Bootstrap, jQuery, and all dependencies)
-   - Direct React (createElement): `http://localhost:8000/direct-react.html`
-   - Direct React (JSX): `http://localhost:8000/direct-react-jsx.html`
-   - React CDN Test: `http://localhost:8000/react-cdn-test.html`
-   - React Inline Fallback: `http://localhost:8000/react-inline.html`
-   - Component Testing: `http://localhost:8000/component-test.html`
-   - Development Testing: `http://localhost:8000/dev-test.html`
+   - Main App: `http://localhost:8080/` (includes Bootstrap, jQuery, and all dependencies)
+   - Direct React (createElement): `http://localhost:8080/direct-react.html`
+   - Direct React (JSX): `http://localhost:8080/direct-react-jsx.html`
+   - React CDN Test: `http://localhost:8080/react-cdn-test.html`
+   - React Inline Fallback: `http://localhost:8080/react-inline.html`
+   - Component Testing: `http://localhost:8080/component-test.html`
+   - Development Testing: `http://localhost:8080/dev-test.html`
 
 ## 🧪 Testing Features
 
@@ -70,7 +70,7 @@ Two approaches for rendering React components without webpack bundling:
 - Fast compilation and error reporting
 
 ### Development Tools
-- Webpack Dev Server on port 8000
+- Webpack Dev Server on port 8080
 - Source maps for debugging
 - React Developer Tools support
 - Error overlay for quick debugging

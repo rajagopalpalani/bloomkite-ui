@@ -174,7 +174,7 @@ if (isDevelopment) {
 //     next();
 // });
 
-app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 8080);
 
 if (isDevelopment) {
     configureDevelopment(app);

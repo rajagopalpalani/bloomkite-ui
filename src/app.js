@@ -15,7 +15,7 @@ const app = express();
 
 // Environment configuration
 const isDevelopment = process.env.NODE_ENV === 'development';
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 // Configure logging
 logger.configure({

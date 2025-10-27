@@ -111,11 +111,11 @@ nvm use 18
 
 ### 8. Port Conflicts
 
-**Problem**: Port 8000 already in use
+**Problem**: Port 8080 already in use
 **Solution**:
 ```bash
-# Check what's using port 8000
-netstat -ano | findstr :8000
+# Check what's using port 8080
+netstat -ano | findstr :8080
 
 # Kill the process (Windows)
 taskkill /PID <PID> /F
@@ -227,7 +227,7 @@ npx webpack --config webpack/client.js --verbose
 - [ ] React Router v6 migration complete
 - [ ] React Helmet Async setup
 - [ ] No syntax errors
-- [ ] Port 8000 available
+- [ ] Port 8080 available
 - [ ] NODE_ENV set to development
 
 
