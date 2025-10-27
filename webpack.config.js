@@ -9,11 +9,11 @@ const isDevelopment = !isProduction;
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
-  
+
   entry: {
     main: path.resolve(__dirname, 'src/client/index.js')
   },
-  
+
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: isProduction ? 'app.[name].js' : '[name].js',
@@ -21,7 +21,7 @@ module.exports = {
     clean: true,
     publicPath: '/'
   },
-  
+
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: [
@@ -36,7 +36,7 @@ module.exports = {
       '@images': path.resolve(__dirname, 'src/images')
     }
   },
-  
+
   module: {
     rules: [
       {
@@ -105,7 +105,7 @@ module.exports = {
       }
     ]
   },
-  
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
@@ -124,7 +124,7 @@ module.exports = {
         minifyURLs: true
       } : false
     }),
-    
+
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -140,14 +140,14 @@ module.exports = {
         }
       ]
     }),
-    
+
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       'process.env.REACT_APP_ENV': JSON.stringify(process.env.REACT_APP_ENV || 'development'),
       __API__: JSON.stringify(require('./src/config/setupApi')(process.env.ENV || 'DEV')),
       __ENV__: JSON.stringify(process.env.ENV || 'DEV')
     }),
-    
+
     ...(isProduction ? [
       new MiniCssExtractPlugin({
         filename: 'app.[name].css',
@@ -157,7 +157,7 @@ module.exports = {
       new webpack.HotModuleReplacementPlugin()
     ])
   ],
-  
+
   optimization: {
     splitChunks: {
       chunks: 'all',
@@ -181,10 +181,11 @@ module.exports = {
       name: 'runtime'
     }
   },
-  
+
   devtool: isDevelopment ? 'eval-cheap-module-source-map' : 'source-map',
-  
+
   devServer: {
+    allowedHosts: 'all',
     static: {
       directory: path.join(__dirname, 'dist')
     },
@@ -200,7 +201,7 @@ module.exports = {
       }
     }
   },
-  
+
   stats: {
     colors: true,
     modules: false,
