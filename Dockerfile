@@ -1,25 +1,32 @@
-FROM alpine:latest
+FROM node:18-slim
 
-RUN apk add --no-cache nodejs npm git
+# Install git for potential git-based dependencies
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
-RUN node --version
+# Set working directory
+WORKDIR /app
 
-RUN npm -v
+# Copy package files
+COPY package*.json ./
 
-#WORKDIR /app
+# Install all dependencies (including devDependencies for build)
+RUN npm ci && npm cache clean --force
 
+# Copy application files
 COPY . .
 
-RUN npm install
+# Build the production bundles
+RUN npm run build
 
-RUN npm run build:client
+# Remove devDependencies after build to reduce image size
+RUN npm prune --production
 
-RUN npm run build:server
-
-RUN npm run build:node
-
+# Expose port
 EXPOSE 8080
 
-#ENTRYPOINT ["npm"]
+# Set Node.js memory limits and production environment
+ENV NODE_ENV=production
+ENV NODE_OPTIONS="--max-old-space-size=512"
 
-CMD ["npm", "start"]
+# Start the Express production server
+CMD ["node", "src/app.js"]

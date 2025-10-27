@@ -16,8 +16,8 @@ module.exports = {
   
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: isProduction ? '[name].[contenthash].js' : '[name].js',
-    chunkFilename: isProduction ? '[name].[contenthash].chunk.js' : '[name].chunk.js',
+    filename: isProduction ? 'app.[name].js' : '[name].js',
+    chunkFilename: isProduction ? '[name].chunk.js' : '[name].chunk.js',
     clean: true,
     publicPath: '/'
   },
@@ -150,8 +150,8 @@ module.exports = {
     
     ...(isProduction ? [
       new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
-        chunkFilename: '[name].[contenthash].chunk.css'
+        filename: 'app.[name].css',
+        chunkFilename: '[name].chunk.css'
       })
     ] : [
       new webpack.HotModuleReplacementPlugin()

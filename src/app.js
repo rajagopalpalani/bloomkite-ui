@@ -119,7 +119,7 @@ if (isDevelopment) {
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
                     <link href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
                     <link rel="shortcut icon" href="/favicon.png">
-                    <link rel="stylesheet" href="/app.client.css">
+                    <link rel="stylesheet" href="/app.main.css">
                 </head>
                 <body>
                     <div id="react-root"></div>
@@ -130,7 +130,7 @@ if (isDevelopment) {
                     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
                     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                     <!-- React Bundle -->
-                    <script type="text/javascript" src="/app.client.js"></script>
+                    <script type="text/javascript" src="/app.main.js"></script>
                 </body>
             </html>
         `);
@@ -139,8 +139,8 @@ if (isDevelopment) {
     // Production configuration - Client-side rendering only
     logger.info('Configuring production environment...');
     
-    // Serve static files from public directory
-    app.use(express.static(path.join(__dirname, '../public')));
+    // Serve static files from dist directory (webpack build output)
+    app.use(express.static(path.join(__dirname, '../dist')));
     
     // Production HTML template - Client-side rendering only
     app.get('*', (req, res) => {
@@ -163,7 +163,7 @@ if (isDevelopment) {
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
                     <link href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
                     <link rel="shortcut icon" href="/favicon.png">
-                    <link rel="stylesheet" href="/app.client.css">
+                    <link rel="stylesheet" href="/app.main.css">
                 </head>
                 <body>
                     <div id="react-root"></div>
@@ -174,7 +174,7 @@ if (isDevelopment) {
                     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
                     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                     <!-- React Bundle -->
-                    <script type="text/javascript" src="/app.client.js"></script>
+                    <script type="text/javascript" src="/app.main.js"></script>
                 </body>
             </html>
         `);
