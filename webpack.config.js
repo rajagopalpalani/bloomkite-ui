@@ -10,6 +10,14 @@ const isDevelopment = !isProduction;
 module.exports = {
   mode: isProduction ? 'production' : 'development',
 
+  // Enable persistent caching for faster rebuilds
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename]
+    }
+  },
+
   entry: {
     main: path.resolve(__dirname, 'src/client/index.js')
   },
@@ -34,7 +42,9 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/shared/components'),
       '@containers': path.resolve(__dirname, 'src/shared/containers'),
       '@images': path.resolve(__dirname, 'src/images')
-    }
+    },
+    // Cache module resolution results
+    cacheWithContext: false
   },
 
   module: {
@@ -45,8 +55,15 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
+            // Enable Babel cache for faster rebuilds
+            cacheDirectory: true,
+            cacheCompression: false, // Faster builds, slightly larger cache
             presets: [
-              ['@babel/preset-env', { targets: { browsers: ['last 2 versions'] } }],
+              ['@babel/preset-env', { 
+                targets: { browsers: ['last 2 versions'] },
+                // Use loose mode for faster compilation
+                loose: true
+              }],
               ['@babel/preset-react', { runtime: 'automatic' }]
             ],
             plugins: [
@@ -129,14 +146,18 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/images'),
-          to: 'images'
+          to: 'images',
+          // Only copy changed files
+          noErrorOnMissing: true
         },
         {
           from: path.resolve(__dirname, 'public'),
           to: '.',
           globOptions: {
             ignore: ['**/index.html']
-          }
+          },
+          // Only copy changed files
+          noErrorOnMissing: true
         }
       ]
     }),
@@ -159,6 +180,10 @@ module.exports = {
   ],
 
   optimization: {
+    // Use moduleIds: 'deterministic' for better caching
+    moduleIds: 'deterministic',
+    // Only minimize in production
+    minimize: isProduction,
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
@@ -166,7 +191,8 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all',
-          priority: 10
+          priority: 10,
+          reuseExistingChunk: true
         },
         common: {
           name: 'common',
@@ -179,10 +205,15 @@ module.exports = {
     },
     runtimeChunk: {
       name: 'runtime'
-    }
+    },
+    // Use faster minification in development
+    ...(isProduction ? {} : {
+      usedExports: false
+    })
   },
 
-  devtool: isDevelopment ? 'eval-cheap-module-source-map' : 'source-map',
+  // Faster source maps for development, no source maps for production builds
+  devtool: isDevelopment ? 'eval-cheap-module-source-map' : false,
 
   devServer: {
     allowedHosts: 'all',
@@ -193,7 +224,9 @@ module.exports = {
     port: 8080,
     hot: true,
     historyApiFallback: true,
-    open: true,
+    open: false, // Disable auto-open for faster startup
+    // Optimize compilation performance
+    webSocketServer: 'ws',
     client: {
       overlay: {
         errors: true,

@@ -1,0 +1,51 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+dist
+build
+*.zip
+
+# Development files
+.git
+.gitignore
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Test files
+__tests__
+*.test.js
+*.test.jsx
+*.spec.js
+*.spec.jsx
+coverage
+
+# Documentation
+*.md
+!README.md
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Temporary files
+*.log
+tmp
+temp
+.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# CI/CD (already handled in buildspec)
+buildspec*.yml
+imagedefinitions*.json
+
