@@ -1,11 +1,11 @@
 const setupApi = function (appEnv) {
     switch (appEnv) {
         case 'PROD':
-            return 'https://api-prod.bloomkite.com/app';
+            return 'http://ec2-54-91-87-30.compute-1.amazonaws.com:8080/';
         case 'STAGE':
-            return 'https://api-prod.bloomkite.com/app';
+            return 'http://ec2-54-91-87-30.compute-1.amazonaws.com:8080/';
         case 'DEV':
-            return 'http://localhost:8080';
+            return 'http://ec2-54-91-87-30.compute-1.amazonaws.com:8080/';
         default:
             return 'http://localhost:8080';
     };

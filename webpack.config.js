@@ -154,7 +154,8 @@ module.exports = {
           from: path.resolve(__dirname, 'public'),
           to: '.',
           globOptions: {
-            ignore: ['**/index.html']
+            // Ignore old build files - they will be generated fresh by webpack
+            ignore: ['**/index.html', '**/app.client.js', '**/app.server.js', '**/app.client.css', '**/vendors.js', '**/runtime.js']
           },
           // Only copy changed files
           noErrorOnMissing: true

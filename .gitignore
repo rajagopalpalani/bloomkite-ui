@@ -7,6 +7,7 @@ node_modules
 # Project
 __tests__/__snapshots__
 
+/dist
 #Logs
 *.log 
 

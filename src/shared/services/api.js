@@ -2,14 +2,39 @@ import axios from 'axios';
 import { toastrError, toastrSuccess } from '../helpers/toastrHelper';
 import { toastrMessage } from '../constants/toastrMessage';
 
-export const API = axios.create({ baseURL: 'http://localhost:8080/' });
+// Ensure baseURL is always HTTP
+const HTTP_BASE_URL = 'http://ec2-54-91-87-30.compute-1.amazonaws.com:8080/';
+
+export const API = axios.create({ baseURL: HTTP_BASE_URL });
+
+// Override axios defaults to prevent HTTPS
+API.defaults.baseURL = HTTP_BASE_URL;
 
 API.interceptors.request.use(
     function (config) {
+        // Always set baseURL to HTTP (prevent any HTTPS)
+        config.baseURL = HTTP_BASE_URL;
+        
+        // Force HTTP - convert any HTTPS to HTTP in URL
+        if (config.url && config.url.startsWith('https://')) {
+            console.warn('⚠️ Detected HTTPS URL, converting to HTTP:', config.url);
+            config.url = config.url.replace('https://', 'http://');
+        }
+        
+        // Ensure final URL is HTTP
+        if (config.url && !config.url.startsWith('http://') && !config.url.startsWith('/')) {
+            config.url = HTTP_BASE_URL.replace(/\/$/, '') + config.url;
+        }
+        
         const token = JSON.parse(localStorage.getItem('bloomkiteBusinessUser'));
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
+        
+        // Log final URL for debugging
+        const finalURL = (config.baseURL || HTTP_BASE_URL) + (config.url || '').replace(/^https?:\/\/[^\/]+/, '').replace(/^\//, '');
+        console.log('🔗 API Request URL:', finalURL);
+        
         return config;
     },
     function (error) {

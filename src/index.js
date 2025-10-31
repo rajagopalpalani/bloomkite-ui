@@ -157,7 +157,7 @@ if (isDevelopment) {
                     "https://code.jquery.com"
                 ],
                 imgSrc: ["'self'", "data:", "https:"],
-                connectSrc: ["'self'", "ws:", "wss:", "https:"],
+                connectSrc: ["'self'", "ws:", "wss:", "http:", "https:", "http://ec2-54-91-87-30.compute-1.amazonaws.com:8080"],
                 fontSrc: ["'self'", "https:", "data:"],
                 objectSrc: ["'none'"],
                 mediaSrc: ["'self'"],

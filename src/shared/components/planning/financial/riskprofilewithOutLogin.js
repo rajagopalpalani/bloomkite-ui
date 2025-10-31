@@ -33,12 +33,32 @@ class RiskProfileWithOutLogin extends Component {
     }
 
     componentDidMount() {
-        const riskProfileQuestionaire = [...this.props.riskQuestionaire];
-        if (this.props.riskProfile && this.props.riskProfile.length > 0) {
+        this.initializeRiskProfileQuestionaire();
+    }
+
+    componentDidUpdate(prevProps) {
+        // Update if riskQuestionaire prop changes
+        if (prevProps.riskQuestionaire !== this.props.riskQuestionaire) {
+            this.initializeRiskProfileQuestionaire();
+        }
+    }
+
+    initializeRiskProfileQuestionaire = () => {
+        // Filter out null/undefined items and ensure array exists
+        const riskQuestionaire = Array.isArray(this.props.riskQuestionaire) 
+            ? this.props.riskQuestionaire.filter(item => item !== null && item !== undefined && item.question)
+            : [];
+        
+        const riskProfileQuestionaire = [...riskQuestionaire];
+        
+        if (this.props.riskProfile && Array.isArray(this.props.riskProfile) && this.props.riskProfile.length > 0) {
             riskProfileQuestionaire.forEach((riskProfile, i) => {
-                const answer = this.props.riskProfile.filter((data) => data.questionId === riskProfile.questionId);
-                if (answer.length > 0) {
-                    riskProfileQuestionaire[i].answerId = answer[0].answerId;
+                // Only process if riskProfile is valid
+                if (riskProfile && riskProfile.questionId) {
+                    const answer = this.props.riskProfile.filter((data) => data && data.questionId === riskProfile.questionId);
+                    if (answer.length > 0 && answer[0]) {
+                        riskProfileQuestionaire[i].answerId = answer[0].answerId;
+                    }
                 }
             });
         }
@@ -69,12 +89,14 @@ class RiskProfileWithOutLogin extends Component {
 
     formPayload = ({ riskProfile: riskProfiles }) => {
         const riskProfileItems = [];
-        for (const riskProfile of riskProfiles) {
-            if (riskProfile.answerId) {
-                riskProfileItems.push({
-                    answerId: riskProfile.answerId,
-                    questionId: riskProfile.questionId
-                });
+        if (Array.isArray(riskProfiles)) {
+            for (const riskProfile of riskProfiles) {
+                if (riskProfile && riskProfile.answerId && riskProfile.questionId) {
+                    riskProfileItems.push({
+                        answerId: riskProfile.answerId,
+                        questionId: riskProfile.questionId
+                    });
+                }
             }
         }
         return riskProfileItems;
@@ -99,8 +121,9 @@ class RiskProfileWithOutLogin extends Component {
     };
 
     handleDisableButton = (values) => {
-        const list = (values.riskProfile || []).filter((item) => item.answerId);
-        if (list.length + 1 == this.state.riskProfileQuestionaire.length) {
+        const validItems = (this.state.riskProfileQuestionaire || []).filter(item => item !== null && item !== undefined);
+        const list = (values.riskProfile || []).filter((item) => item && item.answerId);
+        if (list.length + 1 === validItems.length) {
             this.setState({ disabled: false });
         }
     };
@@ -119,11 +142,17 @@ class RiskProfileWithOutLogin extends Component {
                                     <CustomFormik
                                         enableReinitialize={true}
                                         initialValues={{
-                                            riskProfile: JSON.parse(JSON.stringify(this.state.riskProfileQuestionaire))
+                                            riskProfile: JSON.parse(JSON.stringify(this.state.riskProfileQuestionaire.filter(item => item !== null && item !== undefined)))
                                         }}
                                         onSubmit={this.handleSubmit}
                                         innerRef={this.formRef}>
                                         {({ values, setFieldValue }) => {
+                                            // Filter out null/undefined items and ensure answerRes exists
+                                            // Map with original index to maintain form field references
+                                            const validRiskProfiles = (values.riskProfile || [])
+                                                .map((questions, originalIndex) => ({ questions, originalIndex }))
+                                                .filter(({ questions }) => questions !== null && questions !== undefined && questions.question && Array.isArray(questions.answerRes));
+                                            
                                             return (
                                                 <Form>
                                                     <CustomFieldArray
@@ -131,34 +160,45 @@ class RiskProfileWithOutLogin extends Component {
                                                         render={(arrayHelpers) => (
                                                             <div>
                                                                 <dl>
-                                                                    {values.riskProfile.map((questions, index) => (
-                                                                        <React.Fragment key={index}>
+                                                                    {validRiskProfiles.map(({ questions, originalIndex }, displayIndex) => (
+                                                                        <React.Fragment key={questions.questionId || originalIndex}>
                                                                             <dt className="Risk-align">
-                                                                                {`${index + 1}. `}
-                                                                                {questions.question}
+                                                                                {`${displayIndex + 1}. `}
+                                                                                {questions.question || ''}
                                                                             </dt>
                                                                             <dd>
-                                                                                {questions.answerRes.map((options, i) => (
-                                                                                    <React.Fragment key={i}>
-                                                                                        <input
-                                                                                            type="radio"
-                                                                                            value={options.answerId}
-                                                                                            id={options.answerId}
-                                                                                            checked={options.answerId === questions.answerId}
-                                                                                            onChange={() =>
-                                                                                                setFieldValue(
-                                                                                                    `riskProfile.${index}.answerId`,
-                                                                                                    options.answerId,
-                                                                                                    this.handleDisableButton(values)
-                                                                                                )
-                                                                                            }
-                                                                                        />
-                                                                                        <label htmlFor={options.answerId} className="risk-design">
-                                                                                            {options.answer}
-                                                                                        </label>
-                                                                                        <br />
-                                                                                    </React.Fragment>
-                                                                                ))}
+                                                                                {Array.isArray(questions.answerRes) && questions.answerRes
+                                                                                    .filter(options => options !== null && options !== undefined)
+                                                                                    .map((options, i) => (
+                                                                                        <React.Fragment key={options.answerId || i}>
+                                                                                            <input
+                                                                                                type="radio"
+                                                                                                value={options.answerId}
+                                                                                                id={options.answerId}
+                                                                                                checked={options.answerId === questions.answerId}
+                                                                                                onChange={() => {
+                                                                                                    setFieldValue(
+                                                                                                        `riskProfile.${originalIndex}.answerId`,
+                                                                                                        options.answerId,
+                                                                                                        false
+                                                                                                    );
+                                                                                                    // Update with new answerId
+                                                                                                    const updatedQuestion = { ...questions, answerId: options.answerId };
+                                                                                                    const updatedValues = {
+                                                                                                        ...values,
+                                                                                                        riskProfile: values.riskProfile.map((q, idx) => 
+                                                                                                            idx === originalIndex ? updatedQuestion : q
+                                                                                                        )
+                                                                                                    };
+                                                                                                    this.handleDisableButton(updatedValues);
+                                                                                                }}
+                                                                                            />
+                                                                                            <label htmlFor={options.answerId} className="risk-design">
+                                                                                                {options.answer || ''}
+                                                                                            </label>
+                                                                                            <br />
+                                                                                        </React.Fragment>
+                                                                                    ))}
                                                                             </dd>
                                                                         </React.Fragment>
                                                                     ))}
