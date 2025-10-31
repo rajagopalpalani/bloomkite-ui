@@ -61,7 +61,7 @@ app.use(helmet({
             fontSrc: ["'self'", "https:", "data:"],
             objectSrc: ["'none'"],
             mediaSrc: ["'self'"],
-            frameSrc: ["'none'"],
+            frameSrc: ["'none'", "https://checkout.razorpay.com", "https://api.razorpay.com"],
         },
     },
 }));
